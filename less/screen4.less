@@ -1,0 +1,62 @@
+/**************
+* SCREEN 4 - MARQUES
+**************/
+
+ .screen4 {
+    margin-top: 40px;
+    background-color: #212655;
+    color: @king-blue;
+
+    h2 {
+        color: white;
+        margin-top: 50px;
+    }
+
+    .bouteilles {
+        background-color: white;
+        width: 100%;
+        height: 240px;
+        margin-top: 380px;
+
+        .content {
+            width: 773px;
+            margin: auto;
+            position: relative;
+        }
+
+        img.background {
+            position: relative;
+            top: -331px;
+        }
+        img.bouteille {
+            position: absolute;
+            .transform();
+            .transition(transform 0.5s ease);
+            cursor: pointer;
+        }
+        img.bouteille:hover {
+            .transform(1.5);
+            z-index: 200;
+        }
+    }
+
+    .click {
+        text-align: center;
+        .font_htl;
+        display: none;
+        position: absolute;
+        bottom: 120px;
+        width: 100%;
+    }
+
+    @media only screen and (max-width:800px) {
+        .click { display: block }
+    }
+
+    @media only screen and (max-width:400px) {
+        .bouteilles {
+            height: 200px;
+            margin-top: 200px;
+        }
+    }
+ }

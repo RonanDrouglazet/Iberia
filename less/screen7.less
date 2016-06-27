@@ -1,0 +1,76 @@
+/**************
+* SCREEN 7 - FOOTER
+**************/
+
+.screen7 {
+    @scolor: #d1d3d4;
+
+    width: 100%;
+    height: 1073px;
+    padding-top: 190px;
+    margin-top: 40px;
+    .font_htl;
+    font-size: 16px;
+    color: @scolor;
+
+    h2 {
+        .font_rs;
+        font-size: 18px;
+    }
+
+    a { color: @scolor }
+
+    .cartouche {
+        width: 742px;
+        max-width: 100%;
+        height: 334px;
+        margin: 0px auto;
+        padding-top: 110px;
+        h2 {
+            margin-bottom: 0;
+        }
+        p {
+            .font_rs;
+            font-size: 16px;
+        }
+    }
+
+    img.logo { height: 200px }
+    img.text { max-width: 100%; margin-top: 50px }
+    img.text.mobile { display: none }
+    img { display: block }
+
+    .divider {
+        margin: 100px auto 10px auto;
+        width: 880px;
+        height: 1px;
+        background-color: @scolor;
+    }
+    .foot {
+        width: 880px;
+        max-width: 100%;
+        margin: auto;
+        text-align: left;
+
+        .bt {
+            display: inline-block;
+            margin-right: 40px;
+        }
+    }
+
+    @media only screen and (max-width:750px) {
+        img.text { display: none }
+        img.text.mobile { display: block }
+    }
+
+    @media only screen and (max-width:400px) {
+        .foot .bt {
+            margin-right: 5px;
+            font-size: 11px;
+        }
+        height: 900px;
+    }
+
+
+    .cover_me("IMAGE_FOND_ROSE_DES_VENTS.jpg");
+}
