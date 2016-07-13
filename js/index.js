@@ -222,6 +222,7 @@ $(document).ready(function() {
     //if (cookie) {
     //    $('.intro').fadeOut(0)
     //} else {
+        $('.intro').show()
         $('.ui.dropdown').dropdown()
 
         $('i.remove').click(function() {
@@ -589,6 +590,7 @@ $(document).ready(function() {
 
     var arrowDetails = function() {
         if ($(this).hasClass('rotate')) {
+            $(slides[index_slide]).find('section').replaceWith($('body > .screen10').clone())
             $('body > .screen10').slideUp()
             $('html, body').animate({
               scrollTop: $('.screen5').offset().top
