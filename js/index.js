@@ -202,6 +202,7 @@ $(document).ready(function() {
              stop = false
          })
          ctnToTouch.on('touchmove', function(e) {
+             e.preventDefault();
              if (stop) return
              diff = e.originalEvent.pageX - start
              if (diff < -limit) {
