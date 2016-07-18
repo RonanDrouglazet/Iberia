@@ -208,7 +208,6 @@ $(document).ready(function() {
                  cbk(false)
                  stop = true
              } else if (diff > limit) {
-                 e.preventDefault();
                  cbk(true)
                  stop = true
              }
