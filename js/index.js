@@ -792,12 +792,12 @@ $(document).ready(function() {
                screen1_details()
            }
            // if actu open, close it
-           if ($(document.body).children('.screen9')) {
-               show_actu_details.bind($('.actu .content, .screen3 .button_down'))()
+           if ($(document.body).children('.screen9').length) {
+               show_actu_details.bind($('body > .actu.arrowcontainer .button_down'))()
            }
            // if product open, close it
-           if ($(document.body).children('.screen10')) {
-               arrowDetails.bind($('.screen5 .button_down'))()
+           if ($(document.body).children('.screen10').length) {
+               arrowDetails.bind($('body > .marques.arrowcontainer .button_down'))()
            }
            GLOBAL_ANIMATE = true
            save()
