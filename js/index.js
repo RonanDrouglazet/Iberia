@@ -632,6 +632,8 @@ $(document).ready(function() {
 
     if (is_touch_device) {
         makeMeTouch($('.screen5 .slides').children('.button'), $('.screen5'), move_auto)
+    } else {
+        $('.screen5 .slides').children('.button').show()
     }
 
     //menu
@@ -728,6 +730,9 @@ $(document).ready(function() {
              makeMeTouch($('body > .screen10 .arrow'), $('body > .screen10'), function(left) {
                  move(!left)
              })
+         } else {
+             $('body > .screen10 .container .menu').hide()
+             $('body > .screen10 .arrow').show()
          }
      }
 
