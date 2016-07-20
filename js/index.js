@@ -408,12 +408,13 @@ $(document).ready(function() {
     var actu_details = function(section) {
         var current = $(document.body).children('.screen9')
         var actual = section.clone()
+        actual.data('referer', section)
 
         if (current.length) {
-            current.replaceWith(actual)
-        } else {
-            actual.insertBefore('.actu.arrowcontainer')
+            current.data('referer').replaceWith(current)
         }
+
+        actual.insertBefore('.actu.arrowcontainer')
     }
 
     selectActusByDate(2015)
@@ -438,7 +439,7 @@ $(document).ready(function() {
         var actu = $('.actu.center[data-date="'+ date_active +'"]')
 
         if (!$(this).hasClass('rotate')) {
-            actu_details($('.actu.center[data-date="'+ $('section#actualites > .dates > .date.active').attr('id') +'"]').find('section'))
+            actu_details(actu.find('section'))
 
             if (GLOBAL_ANIMATE) {
                 $('html, body').animate({
@@ -448,6 +449,7 @@ $(document).ready(function() {
 
             $('.screen3 .button_down').addClass('rotate').appendTo('body > .actu.arrowcontainer')
         } else {
+            actu.find('section').replaceWith($('body > .screen9').clone())
             $('body > .screen9').slideUp(GLOBAL_ANIMATE ? 400 : 0)
 
             if (GLOBAL_ANIMATE) {
