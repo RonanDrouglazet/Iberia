@@ -451,11 +451,9 @@ $(document).ready(function() {
         } else {
             actu.find('section').replaceWith($('body > .screen9').clone())
 
-            if (GLOBAL_ANIMATE) {
-                $('body > .screen9').slideUp()
-            } else {
+            $('body > .screen9').slideUp(GLOBAL_ANIMATE ? 400 : 0, function() {
                 $('body > .screen9').remove()
-            }
+            })
 
             if (GLOBAL_ANIMATE) {
                 $('html, body').animate({
@@ -619,11 +617,9 @@ $(document).ready(function() {
         if ($(this).hasClass('rotate')) {
             $(slides[index_slide]).find('section').replaceWith($('body > .screen10').clone())
 
-            if (GLOBAL_ANIMATE) {
-                $('body > .screen10').slideUp()
-            } else {
+            $('body > .screen10').slideUp(GLOBAL_ANIMATE ? 400 : 0, function() {
                 $('body > .screen10').remove()
-            }
+            })
 
             if (GLOBAL_ANIMATE) {
                 $('html, body').animate({
