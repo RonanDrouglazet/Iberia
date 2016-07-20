@@ -1,8 +1,11 @@
 $(document).ready(function() {
+    var GLOBAL_ANIMATE = true
+
     var win = $(window);
     var menu = $('header .menu');
     var mheight =  menu.height();
     var fmenu = $('header .floating');
+
     var is_touch_device = function() {
       return 'ontouchstart' in window        // works on most browsers
           || navigator.maxTouchPoints;       // works on IE10/11 and Surface
@@ -253,9 +256,13 @@ $(document).ready(function() {
                 .attr('src', 'img/arrow_down_blue.png')
         } else {
             $('.screen2').slideUp()
-            $('html, body').animate({
-              scrollTop: $('.screen1').offset().top
-            }, 1000);
+
+            if (GLOBAL_ANIMATE) {
+                $('html, body').animate({
+                  scrollTop: $('.screen1').offset().top
+                }, 1000);
+            }
+
             $('.screen2 .button_down')
                .removeClass('rotate')
                .appendTo('.screen1')
@@ -758,5 +765,17 @@ $(document).ready(function() {
 
           return valid
       })
+
+      /**************
+       * OCTOBOOT SAVE (reset)
+       **************/
+
+       window.octoboot_before_save = function() {
+           GLOBAL_ANIMATE = false
+           if (!$('.screen1 .button_down').length) {
+               screen1_details()
+           }
+           GLOBAL_ANIMATE = true
+       }
 
 })
