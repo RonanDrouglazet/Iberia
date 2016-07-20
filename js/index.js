@@ -439,16 +439,23 @@ $(document).ready(function() {
 
         if (!$(this).hasClass('rotate')) {
             actu_details($('.actu.center[data-date="'+ $('section#actualites > .dates > .date.active').attr('id') +'"]').find('section'))
-            $('html, body').animate({
-              scrollTop: $('body > .screen9').offset().top
-            }, 1000);
+
+            if (GLOBAL_ANIMATE) {
+                $('html, body').animate({
+                  scrollTop: $('body > .screen9').offset().top
+                }, 1000);
+            }
 
             $('.screen3 .button_down').addClass('rotate').appendTo('body > .actu.arrowcontainer')
         } else {
-            $('body > .screen9').slideUp()
-            $('html, body').animate({
-              scrollTop: $('.screen3').offset().top
-            }, 1000);
+            $('body > .screen9').slideUp(GLOBAL_ANIMATE ? 400 : 0)
+
+            if (GLOBAL_ANIMATE) {
+                $('html, body').animate({
+                  scrollTop: $('.screen3').offset().top
+                }, 1000);
+            }
+
             $(this).removeClass('rotate').appendTo('.screen3')
         }
     }
@@ -604,10 +611,14 @@ $(document).ready(function() {
     var arrowDetails = function() {
         if ($(this).hasClass('rotate')) {
             $(slides[index_slide]).find('section').replaceWith($('body > .screen10').clone())
-            $('body > .screen10').slideUp()
-            $('html, body').animate({
-              scrollTop: $('.screen5').offset().top
-            }, 1000);
+            $('body > .screen10').slideUp(GLOBAL_ANIMATE ? 400 : 0)
+
+            if (GLOBAL_ANIMATE) {
+                $('html, body').animate({
+                  scrollTop: $('.screen5').offset().top
+                }, 1000);
+            }
+
             $(this)
                 .removeClass('rotate')
                 .appendTo('.screen5')
@@ -776,8 +787,17 @@ $(document).ready(function() {
 
        window.octoboot_before_save = function(save) {
            GLOBAL_ANIMATE = false
+           // if screen 1 open, close it
            if (!$('.screen1 .button_down').length) {
                screen1_details()
+           }
+           // if actu open, close it
+           if ($(document.body).children('.screen9')) {
+               show_actu_details.bind($('.actu .content, .screen3 .button_down'))()
+           }
+           // if product open, close it
+           if ($(document.body).children('.screen10')) {
+               arrowDetails.bind($('.screen5 .button_down'))()
            }
            GLOBAL_ANIMATE = true
            save()
