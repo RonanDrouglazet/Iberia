@@ -246,16 +246,20 @@ $(document).ready(function() {
     var screen1_details = function() {
         if ($('.screen1 .button_down').length) {
             $('.screen2').show()
-            $('html, body').animate({
-              scrollTop: $('.screen2').offset().top
-            }, 1000);
+
+            if (GLOBAL_ANIMATE) {
+                $('html, body').animate({
+                  scrollTop: $('.screen2').offset().top
+                }, 1000);
+            }
+
             $('.screen1 .button_down')
                 .addClass('rotate')
                 .appendTo('.screen2')
                 .find('img')
                 .attr('src', 'img/arrow_down_blue.png')
         } else {
-            $('.screen2').slideUp()
+            $('.screen2').slideUp(GLOBAL_ANIMATE ? 400 : 0)
 
             if (GLOBAL_ANIMATE) {
                 $('html, body').animate({
@@ -770,12 +774,13 @@ $(document).ready(function() {
        * OCTOBOOT SAVE (reset)
        **************/
 
-       window.octoboot_before_save = function() {
+       window.octoboot_before_save = function(save) {
            GLOBAL_ANIMATE = false
            if (!$('.screen1 .button_down').length) {
                screen1_details()
            }
            GLOBAL_ANIMATE = true
+           save()
        }
 
 })
