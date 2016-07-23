@@ -790,7 +790,7 @@ $(document).ready(function() {
       })
 
       /**************
-       * OCTOBOOT SAVE (reset)
+       * OCTOBOOT CUSTOM (reset, duplicate, etc..)
        **************/
 
        window.octoboot_before_save = function(save) {
@@ -809,6 +809,17 @@ $(document).ready(function() {
            }
            GLOBAL_ANIMATE = true
            save()
+       }
+
+       window.octoboot_duplicate_actu = function(actu) {
+           if (actu) {
+               $(actu).find('.button').click(function() {
+                   moveActu($(this).hasClass('right'))
+               })
+               $(actu).find('.content').click(show_actu_details)
+           }
+
+           selectActusByDate($('section#actualites > .dates > .date.active').attr('id'))
        }
 
 })
