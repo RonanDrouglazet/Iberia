@@ -910,11 +910,11 @@ $(document).ready(function() {
                 break
 
                 case 'buttonl':
+                    var i = getId($(element).parents('.row').children('.three.wide.column:not(.main)').children('.active').get(0))
+                    var ci = $(element).index()
+
                     // duplicate
                     if (duplicate) {
-                        var i = getId($(element).parents('.row').children('.three.wide.column:not(.main)').children('.active').get(0))
-                        console.log(i, $(element).parents('.row').children('.three.wide.column:not(.main)').children('.active'))
-                        var ci = $(element).index()
                         var to_duplicate = $(slides[i]).find('section .slide:nth-child(' + ci + ')')
                         to_duplicate.clone().insertAfter(to_duplicate)
 
@@ -922,10 +922,12 @@ $(document).ready(function() {
                         to_duplicate.clone().insertAfter(to_duplicate)
 
                         showDetails($(slides[i]).find('section'), ci)
-                        submenu_marques_click()
                     } else {
-
+                        $(slides[i]).find('section .slide:nth-child(' + ci + ')').remove()
+                        $(slides[i]).find('section .menu > div:nth-child(' + ci + ')').remove()
+                        showDetails($(slides[i]).find('section'))
                     }
+                    submenu_marques_click()
                 break
             }
         }
