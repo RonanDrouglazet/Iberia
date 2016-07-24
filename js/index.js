@@ -120,24 +120,47 @@ $(document).ready(function() {
             }
         })
 
-        $('header .marques .button span').hover(function() {
-            var parent = $(this).parents('.column')
-            parent.find('.button.active').removeClass('active')
+        $('header .marques .button span').hover(submenu_marques_span, null)
+        submenu_marques_click()
+    }
 
-            if (parent.hasClass('main')) {
-                $('header .marques .active').removeClass('active')
-            }
+    var submenu_marques_span = function() {
+        var parent = $(this).parents('.column')
+        parent.find('.button.active').removeClass('active')
 
-            $(this).parent().addClass('active')
+        if (parent.hasClass('main')) {
+            $('header .marques .active').removeClass('active')
+        }
 
-            var next = parent.next().addClass('active')
+        $(this).parent().addClass('active')
 
-            if (!parent.hasClass('main') && parent.find('.button').length >= 2) {
-                next.children('div').css('visibility', 'hidden')
-                next.children('div:nth-child(' + (parent.find('.button').index($(this).parent()) + 1) + ')').css('visibility', 'visible')
-            }
+        var next = parent.next().addClass('active')
 
-        }, null)
+        if (!parent.hasClass('main') && parent.find('.button').length >= 2) {
+            next.children('div').css('visibility', 'hidden')
+            next.children('div:nth-child(' + (parent.find('.button').index($(this).parent()) + 1) + ')').css('visibility', 'visible')
+        }
+    }
+
+    var submenu_marques_click = function() {
+        var diff = 0
+        $('header .marques .row .column:last-child').each(function(i, row) {
+            $(row).children('div').each(function(a, div) {
+                diff += a
+                $(div).find('.buttonl').each(function(ib, button) {
+                    var diff2 = diff
+                    $(button).off('click').click(function() {
+                        $('header .marques').hide()
+                        // select marque
+                        select_slide(i + diff2, true)
+                        // select details
+                        setTimeout(function() {
+                            showDetails($(slides[index_slide]).find('section'), ib)
+                        }, 100)
+                    })
+                })
+            })
+        })
     }
 
     var mobileMenu = function() {
@@ -504,9 +527,8 @@ $(document).ready(function() {
     }
 
     var move = function(to) {
-        var s;
-        // move main
-        $(slides[index_slide]).css('left', '-100%')
+        var s, el, oldi = index_slide;
+
 
         // reset out left to out right
         /*if (slides[index_slide - 1]) {
@@ -519,16 +541,30 @@ $(document).ready(function() {
 
         // move next to main
         if ((to || to === 0) && slides[to]) {
-            $(slides[to]).css('left', '0%')
+            el = $(slides[to]).show()
             index_slide = to
         } else if (slides[index_slide + 1]) {
-            $(slides[index_slide + 1]).css('left', '0%')
+            el = $(slides[index_slide + 1]).show()
             index_slide++;
         } else {
             // else restart from begining
             index_slide = 0
-            $(slides[0]).css('left', '0%')
+            el = $(slides[0]).show()
         }
+
+        setTimeout(function() {
+            if (slides[oldi] !== el.get(0)) {
+                $(slides[oldi]).css('left', '-100%').one('transitionend', function(e) {
+                    if (e.target.className === 'cover') {
+                        $(slides[oldi]).one('transitionend', function(e) { $(this).hide() })
+                    } else {
+                        $(this).hide()
+                    }
+                })
+            }
+
+            el.css('left', '0')
+        }, 100)
 
         // if details is open
         if ($(document.body).children('.screen10').length && $(document.body).children('.screen10').css('display') !== 'none') {
@@ -668,26 +704,6 @@ $(document).ready(function() {
         $('.screen5 .slides').children('.button').show()
     }
 
-    //menu
-    var diff = 0
-    $('header .marques .row .column:last-child').each(function(i, row) {
-        $(row).children('div').each(function(a, div) {
-            diff += a
-            $(div).find('.buttonl').each(function(ib, button) {
-                var diff2 = diff
-                $(button).click(function() {
-                    $('header .marques').hide()
-                    // select marque
-                    select_slide(i + diff2, true)
-                    // select details
-                    setTimeout(function() {
-                        showDetails($(slides[index_slide]).find('section'), ib)
-                    }, 100)
-                })
-            })
-        })
-    })
-
     /**************
      * SCREEN 8 - NOS VALEURS
      **************/
@@ -820,6 +836,34 @@ $(document).ready(function() {
            }
 
            selectActusByDate($('section#actualites > .dates > .date.active').attr('id'))
+       }
+
+       window.octoboot_duplicate_marque = function(element) {
+           switch (element.className.replace(' active', '')) {
+               case 'row':
+
+               break
+
+               case 'button':
+                    var i = $(element).index() - 1
+                    // if we add a marques, select and duplicate submarque to
+                    var to_duplicate = $($(element).parent().next().children()[i])
+                    to_duplicate.clone().insertAfter(to_duplicate)
+                    // then active hover on it
+                    $(element).find('span').hover(submenu_marques_span, null)
+                    submenu_marques_click()
+                    // select the slide to duplicate too
+                    to_duplicate = $($('.screen5 .slides > .slide')[i])
+                    to_duplicate.clone().insertAfter(to_duplicate)
+                    // reset slides
+                    slides = screen5.children('.slides').children('.slide')
+                    $(slides[++i]).css('left', Math.min(i * 100, 100) + '%')
+               break
+
+               case 'buttonl':
+
+               break
+           }
        }
 
 })
