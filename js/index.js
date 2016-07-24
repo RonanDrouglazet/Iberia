@@ -829,8 +829,8 @@ $(document).ready(function() {
            save()
        }
 
-       window.octoboot_duplicate_actu = function(actu) {
-           if (actu) {
+       window.octoboot_duplicate_actu = function(actu, duplicate) {
+           if (duplicate) {
                $(actu).find('.button').click(function() {
                    moveActu($(this).hasClass('right'))
                })
@@ -840,7 +840,7 @@ $(document).ready(function() {
            selectActusByDate($('section#actualites > .dates > .date.active').attr('id'))
        }
 
-        window.octoboot_duplicate_marque = function(element) {
+        window.octoboot_duplicate_marque = function(element, duplicate) {
 
             var getId = function(button, row) {
                 var count = 0
@@ -866,7 +866,7 @@ $(document).ready(function() {
             switch (element.className.replace(' active', '')) {
                 case 'row':
                     // duplicate
-                    if (element) {
+                    if (duplicate) {
                         var childs = $(element).children('.three.wide.column:not(.main)').children()
                         childs.each(function(i, bt) {
                             var ci = getId(bt, $(element)) - childs.length
@@ -880,13 +880,16 @@ $(document).ready(function() {
                         })
                         $(element).find('span').hover(submenu_marques_span, null)
                         submenu_marques_click()
+                        $('.screen5 .button_rs_out').off('click').click(function() {
+                            showDetails($(this).parents('.cover').find('section'))
+                        })
                     }
 
                 break
 
                 case 'button':
                     // duplicate
-                    if (element) {
+                    if (duplicate) {
                         var i = getId(element) - 1
                         // if we add a marques, select and duplicate submarque to
                         var to_duplicate = $($(element).parent().next().children()[i])
@@ -900,11 +903,29 @@ $(document).ready(function() {
                         // reset slides
                         slides = screen5.children('.slides').children('.slide')
                         $(slides[++i]).css('left', Math.min(i * 100, 100) + '%')
+                        $('.screen5 .button_rs_out').off('click').click(function() {
+                            showDetails($(this).parents('.cover').find('section'))
+                        })
                     }
                 break
 
                 case 'buttonl':
+                    // duplicate
+                    if (duplicate) {
+                        var i = getId($(element).parents('.row').children('.three.wide.column:not(.main)').children('.active').get(0))
+                        console.log(i, $(element).parents('.row').children('.three.wide.column:not(.main)').children('.active'))
+                        var ci = $(element).index()
+                        var to_duplicate = $(slides[i]).find('section .slide:nth-child(' + ci + ')')
+                        to_duplicate.clone().insertAfter(to_duplicate)
 
+                        to_duplicate = $(slides[i]).find('section .menu > div:nth-child(' + ci + ')')
+                        to_duplicate.clone().insertAfter(to_duplicate)
+
+                        showDetails($(slides[i]).find('section'), ci)
+                        submenu_marques_click()
+                    } else {
+
+                    }
                 break
             }
         }
