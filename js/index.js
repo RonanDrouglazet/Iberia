@@ -558,7 +558,7 @@ $(document).ready(function() {
                 $(slides[oldi]).css('left', '-100%').one('transitionend', function(e) {
                     if (e.target.className === 'cover') {
                         $(slides[oldi]).one('transitionend', function(e) { $(this).hide() })
-                    } else {
+                    } else if ($(this).css('left') !== '0px'){
                         $(this).hide()
                     }
                 })
@@ -840,32 +840,73 @@ $(document).ready(function() {
            selectActusByDate($('section#actualites > .dates > .date.active').attr('id'))
        }
 
-       window.octoboot_duplicate_marque = function(element) {
-           switch (element.className.replace(' active', '')) {
-               case 'row':
+        window.octoboot_duplicate_marque = function(element) {
 
-               break
+            var getId = function(button, row) {
+                var count = 0
+                var found = false
 
-               case 'button':
-                    var i = $(element).index() - 1
-                    // if we add a marques, select and duplicate submarque to
-                    var to_duplicate = $($(element).parent().next().children()[i])
-                    to_duplicate.clone().insertAfter(to_duplicate)
-                    // then active hover on it
-                    $(element).find('span').hover(submenu_marques_span, null)
-                    submenu_marques_click()
-                    // select the slide to duplicate too
-                    to_duplicate = $($('.screen5 .slides > .slide')[i])
-                    to_duplicate.clone().insertAfter(to_duplicate)
-                    // reset slides
-                    slides = screen5.children('.slides').children('.slide')
-                    $(slides[++i]).css('left', Math.min(i * 100, 100) + '%')
-               break
+                row = row || $(element).parents('.row')
+                var row_id = row.index()
 
-               case 'buttonl':
+                row.parent().children('.row').each(function(i, row) {
+                    if (i <= row_id) {
+                        $(row).children('.three.wide.column:not(.main)').children().each(function(nb, bt) {
+                            if (!found && button !== bt) {
+                                count++
+                            } else if (!found) {
+                                found = true
+                            }
+                        })
+                    }
+                })
+                return count
+            }
 
-               break
-           }
-       }
+            switch (element.className.replace(' active', '')) {
+                case 'row':
+                    // duplicate
+                    if (element) {
+                        var childs = $(element).children('.three.wide.column:not(.main)').children()
+                        childs.each(function(i, bt) {
+                            var ci = getId(bt, $(element)) - childs.length
+                            var di = getId(bt, $(element)) - 1
+                            // select the slide to duplicate too
+                            to_duplicate = $($('.screen5 > .slides > .slide')[ci])
+                            to_duplicate.clone().insertAfter($($('.screen5 > .slides > .slide')[di]))
+                            // reset slides
+                            slides = screen5.children('.slides').children('.slide')
+                            $(slides[++di]).css('left', Math.min(di * 100, 100) + '%')
+                        })
+                        $(element).find('span').hover(submenu_marques_span, null)
+                        submenu_marques_click()
+                    }
+
+                break
+
+                case 'button':
+                    // duplicate
+                    if (element) {
+                        var i = getId(element) - 1
+                        // if we add a marques, select and duplicate submarque to
+                        var to_duplicate = $($(element).parent().next().children()[i])
+                        to_duplicate.clone().insertAfter(to_duplicate)
+                        // then active hover on it
+                        $(element).find('span').hover(submenu_marques_span, null)
+                        submenu_marques_click()
+                        // select the slide to duplicate too
+                        to_duplicate = $($('.screen5 > .slides > .slide')[i])
+                        to_duplicate.clone().insertAfter(to_duplicate)
+                        // reset slides
+                        slides = screen5.children('.slides').children('.slide')
+                        $(slides[++i]).css('left', Math.min(i * 100, 100) + '%')
+                    }
+                break
+
+                case 'buttonl':
+
+                break
+            }
+        }
 
 })
