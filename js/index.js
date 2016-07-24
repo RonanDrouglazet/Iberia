@@ -116,7 +116,7 @@ $(document).ready(function() {
             var rect = $('header .marques').get(0).getBoundingClientRect()
 
             if (e.clientY >= rect.bottom) {
-                submenu_timeout_hide = setTimeout(() => $(this).hide(), 1000)
+                submenu_timeout_hide = setTimeout(function() { $(this).hide()}, 1000)
             }
         })
 
