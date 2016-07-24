@@ -595,6 +595,7 @@ $(document).ready(function() {
         })
     }
 
+    slides.find('.cover').css('left', '100%')
     var over_slide = function() {
         slides.find('.cover').css('left', '100%')
         $(slides[index_slide]).find('.cover').css('left', 0)
