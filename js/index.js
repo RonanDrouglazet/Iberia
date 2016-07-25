@@ -730,7 +730,7 @@ $(document).ready(function() {
          // init slides
          var center = win.width() < slideW ? 0 : 50
          var menus = $('body > .screen10 .container .menu > div')
-         var active
+         var active = 0
          menus.each(function(i, bt) {
              if ($(bt).hasClass('active')) {
                  active = i
@@ -865,9 +865,9 @@ $(document).ready(function() {
 
             switch (element.className.replace(' active', '')) {
                 case 'row':
+                    var childs = $(element).children('.three.wide.column:not(.main)').children()
                     // duplicate
                     if (duplicate) {
-                        var childs = $(element).children('.three.wide.column:not(.main)').children()
                         childs.each(function(i, bt) {
                             var ci = getId(bt, $(element)) - childs.length
                             var di = getId(bt, $(element)) - 1
@@ -883,14 +883,24 @@ $(document).ready(function() {
                         $('.screen5 .button_rs_out').off('click').click(function() {
                             showDetails($(this).parents('.cover').find('section'))
                         })
+                    } else {
+                        var slide = $('.screen5 > .slides > .slide')
+                        childs.each(function(i, bt) {
+                            var id = getId(bt, $(element))
+                            // select the slide to duplicate too
+                            $(slide[id]).remove()
+                        })
+                        // reset slides
+                        slides = screen5.children('.slides').children('.slide')
+                        move_auto()
                     }
 
                 break
 
                 case 'button':
+                    var i = getId(element) - 1
                     // duplicate
                     if (duplicate) {
-                        var i = getId(element) - 1
                         // if we add a marques, select and duplicate submarque to
                         var to_duplicate = $($(element).parent().next().children()[i])
                         to_duplicate.clone().insertAfter(to_duplicate)
@@ -906,6 +916,11 @@ $(document).ready(function() {
                         $('.screen5 .button_rs_out').off('click').click(function() {
                             showDetails($(this).parents('.cover').find('section'))
                         })
+                    } else {
+                        $($('.screen5 > .slides > .slide')[++i]).remove()
+                        $($(element).parent().next().children()[i]).remove()
+                        slides = screen5.children('.slides').children('.slide')
+                        move_auto()
                     }
                 break
 
@@ -913,19 +928,40 @@ $(document).ready(function() {
                     var i = getId($(element).parents('.row').children('.three.wide.column:not(.main)').children('.active').get(0))
                     var ci = $(element).index()
 
+                    GLOBAL_ANIMATE = false
+                    // if product open, close it
+                    if ($(document.body).children('.screen10').length) {
+                        arrowDetails.bind($('body > .marques.arrowcontainer .button_down'))()
+                    }
+                    GLOBAL_ANIMATE = true
+
                     // duplicate
                     if (duplicate) {
+                        console.log($(slides[i]))
                         var to_duplicate = $(slides[i]).find('section .slide:nth-child(' + ci + ')')
                         to_duplicate.clone().insertAfter(to_duplicate)
 
-                        to_duplicate = $(slides[i]).find('section .menu > div:nth-child(' + ci + ')')
-                        to_duplicate.clone().insertAfter(to_duplicate)
+                        if ($(slides[i]).find('section .menu').length) {
+                            to_duplicate = $(slides[i]).find('section .menu > div:nth-child(' + ci + ')')
+                            to_duplicate.clone().insertAfter(to_duplicate)
+                        } else {
+                            $(slides[i]).find('section .container').prepend(
+                                '<div class="menu" ><div class=""><div class="line"></div></div><div class=""></div></div>'
+                            )
+                            .children('.slides').append(
+                                '<div class="arrow left"></div><div class="arrow right"></div>'
+                            )
+                        }
 
-                        showDetails($(slides[i]).find('section'), ci)
                     } else {
-                        $(slides[i]).find('section .slide:nth-child(' + ci + ')').remove()
+                        $(slides[i]).find('section .slide:nth-child(' + ++ci + ')').remove()
                         $(slides[i]).find('section .menu > div:nth-child(' + ci + ')').remove()
-                        showDetails($(slides[i]).find('section'))
+
+                        if ($(slides[i]).find('section .menu > div').length === 1) {
+                            $(slides[i]).find('section .menu').remove()
+                            $(slides[i]).find('section .arrow').remove()
+                        }
+
                     }
                     submenu_marques_click()
                 break
