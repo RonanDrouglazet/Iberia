@@ -918,7 +918,7 @@ $(document).ready(function() {
                         })
                     } else {
                         $($('.screen5 > .slides > .slide')[++i]).remove()
-                        $($(element).parent().next().children()[i]).remove()
+                        $($(element).parent().next().children()[$(element).index() - 1]).remove()
                         slides = screen5.children('.slides').children('.slide')
                         move_auto()
                     }
