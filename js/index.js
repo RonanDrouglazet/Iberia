@@ -902,7 +902,7 @@ $(document).ready(function() {
                     // duplicate
                     if (duplicate) {
                         // if we add a marques, select and duplicate submarque to
-                        var to_duplicate = $($(element).parent().next().children()[i])
+                        var to_duplicate = $($(element).parent().next().children()[$(element).index() - 1])
                         to_duplicate.clone().insertAfter(to_duplicate)
                         // then active hover on it
                         $(element).find('span').hover(submenu_marques_span, null)
