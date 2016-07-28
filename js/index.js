@@ -138,7 +138,7 @@ $(document).ready(function() {
 
         var next = parent.next().addClass('active')
 
-        if (!parent.hasClass('main') && parent.find('.button').length >= 2) {
+        if (!parent.hasClass('main')) {
             next.children('div').css('visibility', 'hidden')
             next.children('div:nth-child(' + (parent.find('.button').index($(this).parent()) + 1) + ')').css('visibility', 'visible')
         }
