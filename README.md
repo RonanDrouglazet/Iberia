@@ -1,2 +1,2 @@
 # Iberia
-http://ronandrouglazet.github.io/Iberia/
+http://ronandrouglazet.github.io/Iberia/index.html
