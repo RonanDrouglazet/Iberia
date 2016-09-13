@@ -247,9 +247,9 @@ $(document).ready(function() {
      **************/
     var cookie = decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*18Y\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1"))
 
-    //if (cookie) {
-    //    $('.intro').fadeOut(0)
-    //} else {
+    if (cookie) {
+        $('.intro').fadeOut(0)
+    } else {
         $('.intro').show()
         $('.ui.dropdown').dropdown()
 
@@ -261,7 +261,7 @@ $(document).ready(function() {
             document.cookie = "18Y=true; expires=Tue, 19 Jan 2038 03:14:07 GMT; path=/"
             $('.intro').fadeOut()
         })
-    //}
+    }
 
 
     /**************
