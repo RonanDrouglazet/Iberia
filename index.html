@@ -2,7 +2,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
 
-    <title>Renaissance Spirits - Iberia</title>
+    <title ob-language-default="Renaissance Spirits - Iberia">Renaissance Spirits - Iberia</title>
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/semantic.min.css" />
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.1.8/components/dropdown.min.css" />
 
@@ -16,9 +16,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
 
     <meta name="theme-color" content="#ffffff" />
-</head>
+<script src="module/language.js"></script></head>
 <body>
-    <div class="intro" style="display: none;">
+    <div class="intro" style="">
       <header class="logo">
           <img src="img/logo_renaissance_spirits_argent.png" alt="logo renaissance spirits" />
       </header>
@@ -27,29 +27,29 @@
 
           <div class="ui stackable four column centered grid">
             <div class="six column centered row">
-                <div class="column"><a href="http://renaissance-spirits.com/france/"><button class="ui fluid inverted button">Renaissance France</button></a></div>
-                <div class="column"><button class="ui fluid active inverted button">Renaissance Ibéria</button></div>
+                <div class="column"><a href="http://renaissance-spirits.com/france/"><button class="ui fluid inverted button" ob-language-default="Renaissance France">Renaissance France</button></a></div>
+                <div class="column"><button class="ui fluid active inverted button" ob-language-default="Renaissance Ibéria">Renaissance Ibéria</button></div>
             </div>
             <div class="three column centered row">
                 <div class="column">
                     <div class="ui fluid selection dropdown" tabindex="0">
                       <input type="hidden" name="gender" />
                       <i class="inverted dropdown icon"></i>
-                      <div class="text"><i class="es flag"></i>Español</div>
+                      <div class="text" ob-language-default="Español"><i class="es flag"></i>Español</div>
                       <div class="menu inverted" tabindex="-1">
-                        <div class="active item" data-value="fr"><i class="es flag"></i>Español</div>
+                        <div class="active item" data-value="fr" ob-language-default="Español"><i class="es flag"></i>Español</div>
                       </div>
                     </div>
                 </div>
             </div>
 
             <div class="two column centered row">
-              <div class="column"><p>Certifico que tengo la edad exigida por las leyes de mi país de residencia para acceder a este sitio</p></div>
+              <div class="column"><p ob-language-default="Certifico que tengo la edad exigida por las leyes de mi país de residencia para acceder a este sitio" ob-language-pt="test PT">Certifico que tengo la edad exigida por las leyes de mi país de residencia para acceder a este sitio</p></div>
             </div>
 
             <div class="six column centered row">
-              <div class="column"><button class="ui fluid inverted button accept">Sí</button></div>
-              <div class="column"><a href="http://www.responsibledrinking.eu"><button class="ui fluid inverted button">No</button></a></div>
+              <div class="column"><button class="ui fluid inverted button accept" ob-language-default="Sí">Sí</button></div>
+              <div class="column"><a href="http://www.responsibledrinking.eu"><button class="ui fluid inverted button" ob-language-default="No">No</button></a></div>
             </div>
 
           </div>
@@ -61,74 +61,74 @@
       <div class="menu">
         <div class="ui stackable grid">
           <div class="one wide column"></div>
-          <div class="three wide column" data-to=".screen1acr"><span>HISTORIA Y SAVOIR FAIRE</span></div>
-          <div class="two wide column" data-to=".screen3acr"><span>ÚLTIMAS NOTICIAS</span></div>
-          <div class="three wide column" data-to=".screen8acr"><span>NUESTROS VALORES</span></div>
-          <div class="one wide column" data-to=".screen4acr"><span>MARCAS</span></div>
-          <div class="three wide column"><a href="http://espritdevillevert.com/" target="_blank"><span>MAISON VILLEVERT</span></a></div>
-          <div class="two wide column" data-to=".screen6acr"><span>CONTACTO</span></div>
+          <div class="three wide column" data-to=".screen1acr"><span ob-language-default="HISTORIA Y SAVOIR FAIRE">HISTORIA Y SAVOIR FAIRE</span></div>
+          <div class="two wide column" data-to=".screen3acr"><span ob-language-default="ÚLTIMAS NOTICIAS">ÚLTIMAS NOTICIAS</span></div>
+          <div class="three wide column" data-to=".screen8acr"><span ob-language-default="NUESTROS VALORES" ob-language-pt="TEST PT 2">NUESTROS VALORES</span></div>
+          <div class="one wide column" data-to=".screen4acr"><span ob-language-default="MARCAS">MARCAS</span></div>
+          <div class="three wide column"><a href="http://espritdevillevert.com/" target="_blank"><span ob-language-default="MAISON VILLEVERT">MAISON VILLEVERT</span></a></div>
+          <div class="two wide column" data-to=".screen6acr"><span ob-language-default="CONTACTO">CONTACTO</span></div>
           <div class="one wide column"></div>
 
           <div class="selectbar" style="left: 443px; width: 133px; display: none;"></div>
-          <div class="selectbar" style="display: block; left: 465.188px; width: 134px;"></div>
+          <div class="selectbar" style="display: block; left: 167.422px; width: 175px;"></div>
         </div>
 
       <div class="marques" style="display: none;">
           <div class="ui grid">
             <div class="row" ob-duplicable="octoboot_duplicate_marque">
                 <div class="three wide column main">
-                    <div class="button active"><span>Gin</span><div class="arrow"></div></div>
+                    <div class="button active"><span ob-language-default="Gin">Gin</span><div class="arrow"></div></div>
                 </div>
                 <div class="three wide column active">
-                    <div class="button active" ob-duplicable="octoboot_duplicate_marque"><span>G'VINE</span><div class="arrow"></div></div>
+                    <div class="button active" ob-duplicable="octoboot_duplicate_marque"><span ob-language-default="G'VINE">G'VINE</span><div class="arrow"></div></div>
                 </div>
                 <div class="ten wide column active">
                     <div style="visibility: visible;">
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">G'VINE Floraison</div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">G'VINE Nouaison</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="G'VINE Floraison">G'VINE Floraison</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="G'VINE Nouaison">G'VINE Nouaison</div>
                     </div>
                 </div>
             </div>
             <div class="row" ob-duplicable="octoboot_duplicate_marque">
                 <div class="three wide column main">
-                    <div class="button"><span>Vermouth</span><div class="arrow"></div></div>
+                    <div class="button"><span ob-language-default="Vermouth">Vermouth</span><div class="arrow"></div></div>
                 </div>
                 <div class="three wide column">
-                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span>LA QUINTINYE</span><div class="arrow"></div></div>
+                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span ob-language-default="LA QUINTINYE">LA QUINTINYE</span><div class="arrow"></div></div>
                 </div>
                 <div class="ten wide column">
                     <div style="visibility: visible;">
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">VERMOUTH ROYAL Rouge</div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">VERMOUTH ROYAL Blanc</div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">VERMOUTH ROYAL Extra Dry</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="VERMOUTH ROYAL Rouge">VERMOUTH ROYAL Rouge</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="VERMOUTH ROYAL Blanc">VERMOUTH ROYAL Blanc</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="VERMOUTH ROYAL Extra Dry">VERMOUTH ROYAL Extra Dry</div>
                     </div>
                 </div>
             </div>
             <div class="row" ob-duplicable="octoboot_duplicate_marque">
                 <div class="three wide column main">
-                    <div class="button"><span>Tequila</span><div class="arrow"></div></div>
+                    <div class="button"><span ob-language-default="Tequila">Tequila</span><div class="arrow"></div></div>
                 </div>
                 <div class="three wide column">
-                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span>EXCELLIA</span><div class="arrow"></div></div>
+                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span ob-language-default="EXCELLIA">EXCELLIA</span><div class="arrow"></div></div>
                 </div>
                 <div class="ten wide column">
                     <div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">EXCELLIA Blanco</div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">EXCELLIA Añejo</div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">EXCELLIA Reposado</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="EXCELLIA Blanco">EXCELLIA Blanco</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="EXCELLIA Añejo">EXCELLIA Añejo</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="EXCELLIA Reposado">EXCELLIA Reposado</div>
                     </div>
                 </div>
             </div>
             <div class="row" ob-duplicable="octoboot_duplicate_marque">
                 <div class="three wide column main">
-                    <div class="button"><span>Liqueur</span><div class="arrow"></div></div>
+                    <div class="button"><span ob-language-default="Liqueur">Liqueur</span><div class="arrow"></div></div>
                 </div>
                 <div class="three wide column">
-                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span>JUNE®</span><div class="arrow"></div></div>
+                    <div class="button" ob-duplicable="octoboot_duplicate_marque"><span ob-language-default="JUNE®">JUNE®</span><div class="arrow"></div></div>
                 </div>
                 <div class="ten wide column">
                     <div>
-                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque">JUNE® Liqueur</div>
+                        <div class="buttonl" ob-duplicable="octoboot_duplicate_marque" ob-language-default="JUNE® Liqueur">JUNE® Liqueur</div>
                     </div>
                 </div>
             </div>
@@ -138,13 +138,13 @@
 
       <div class="menu mobile">
         <div class="ui one column grid">
-          <div class="column" data-to=".screen1acr"><span>HISTORIA &amp; Y SAVOIR FAIRE</span></div>
-          <div class="column" data-to=".screen3acr"><span>ÚLTIMAS NOTICIAS</span></div>
-          <div class="column" data-to=".screen8acr"><span>NUESTROS VALORES</span></div>
-          <div class="column" data-to=".screen4acr"><span>MARCAS</span></div>
-          <div class="column"><a href="http://espritdevillevert.com/" target="_blank"><span>MAISON VILLEVERT</span></a></div>
-          <div class="column" data-to=".screen6acr"><span>CONTACTO</span></div>
-          <div class="selectbar" style="display: block; left: 0px; top: 1830px; width: 0px;"></div>
+          <div class="column" data-to=".screen1acr"><span ob-language-default="HISTORIA &amp; Y SAVOIR FAIRE">HISTORIA &amp; Y SAVOIR FAIRE</span></div>
+          <div class="column" data-to=".screen3acr"><span ob-language-default="ÚLTIMAS NOTICIAS">ÚLTIMAS NOTICIAS</span></div>
+          <div class="column" data-to=".screen8acr"><span ob-language-default="NUESTROS VALORES">NUESTROS VALORES</span></div>
+          <div class="column" data-to=".screen4acr"><span ob-language-default="MARCAS">MARCAS</span></div>
+          <div class="column"><a href="http://espritdevillevert.com/" target="_blank"><span ob-language-default="MAISON VILLEVERT">MAISON VILLEVERT</span></a></div>
+          <div class="column" data-to=".screen6acr"><span ob-language-default="CONTACTO">CONTACTO</span></div>
+          <div class="selectbar" style="display: block; left: 0px; top: 248px; width: 0px;"></div>
           <div class="icon"><img src="img/LOGO-RS-BLANC_VALEURS.png" /></div>
         </div>
       </div>      <div class="floating">
@@ -155,15 +155,15 @@
     <section class="screen1" id="histoire">
       <div class="title">
         <img src="img/logo_renaissance_spirits_argent.png" class="logo" alt="logo renaissance spirits" />
-        <h1>renaissance spirits,<br />
+        <h1 ob-language-default="renaissance spirits,&#10;empresa de distribución de bebidas espirituosas de lujo">renaissance spirits,<br />
 empresa de distribución de bebidas espirituosas de lujo</h1>
-        <p>Renaissance Spirits es una empresa independiente distribuidora de bebidas espirituosas<br />
+        <p ob-language-default="Renaissance Spirits es una empresa independiente distribuidora de bebidas espirituosas&#10;de gama alta, asegurando un servicio completo de construcción y&#10;de comercialización de las marcas bajo su responsabilidad.">Renaissance Spirits es una empresa independiente distribuidora de bebidas espirituosas<br />
 de gama alta, asegurando un servicio completo de construcción y<br />
 de comercialización de las marcas bajo su responsabilidad.</p>
       </div>
 
       <div class="button_rs_out">
-        <div class="button_rs_in">Saber más...</div>
+        <div class="button_rs_in" ob-language-default="Saber más...">Saber más...</div>
       </div>    <div class="button_down">
           <img src="img/arrow_down.png" alt="arrow" />
         </div></section>
@@ -176,11 +176,11 @@ de comercialización de las marcas bajo su responsabilidad.</p>
             <div class="ui stackable grid">
               <div class="five wide column"></div>
               <div class="eleven wide column">
-                <p class="big">Nuestro deseo es convertirnos en la primera opción para las marcas de bebidas espirituosas de gama<br />
+                <p class="big" ob-language-default="Nuestro deseo es convertirnos en la primera opción para las marcas de bebidas espirituosas de gama&#10;alta que deseen entrar en un nuevo mercado y para aquellas que deseen seguir creciendo.">Nuestro deseo es convertirnos en la primera opción para las marcas de bebidas espirituosas de gama<br />
 alta que deseen entrar en un nuevo mercado y para aquellas que deseen seguir creciendo.</p>
-                <p class="small">Nuestra experiencia comercial y nuestro compromiso nos permiten garantizar a cada uno de nuestro colaboradores un despliegue óptimo y la puesta en marcha de planes de acción que les permitirán establecer relaciones únicas con los consumidores, los prescriptores y los clientes.</p>
-                <p class="big">Aspiramos a que nuestros clientes nos consideren como interlocutores únicos, sumamente profesionales y que trabajemos juntos, de la mano  con el fin de optimizar el potencial de las marcas que representamos. Para cumplir con está misión, contamos  con una gran experiencia en la industria.</p>
-                <p class="big">Colaboramos con los distintos canales de distribución con un objetivo concreto en el on trade, las<br />
+                <p class="small" ob-language-default="Nuestra experiencia comercial y nuestro compromiso nos permiten garantizar a cada uno de nuestro colaboradores un despliegue óptimo y la puesta en marcha de planes de acción que les permitirán establecer relaciones únicas con los consumidores, los prescriptores y los clientes.">Nuestra experiencia comercial y nuestro compromiso nos permiten garantizar a cada uno de nuestro colaboradores un despliegue óptimo y la puesta en marcha de planes de acción que les permitirán establecer relaciones únicas con los consumidores, los prescriptores y los clientes.</p>
+                <p class="big" ob-language-default="Aspiramos a que nuestros clientes nos consideren como interlocutores únicos, sumamente profesionales y que trabajemos juntos, de la mano  con el fin de optimizar el potencial de las marcas que representamos. Para cumplir con está misión, contamos  con una gran experiencia en la industria.">Aspiramos a que nuestros clientes nos consideren como interlocutores únicos, sumamente profesionales y que trabajemos juntos, de la mano  con el fin de optimizar el potencial de las marcas que representamos. Para cumplir con está misión, contamos  con una gran experiencia en la industria.</p>
+                <p class="big" ob-language-default="Colaboramos con los distintos canales de distribución con un objetivo concreto en el on trade, las&#10;tiendas especializadas, los mayoristas y los actores de C &amp; C.">Colaboramos con los distintos canales de distribución con un objetivo concreto en el on trade, las<br />
 tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
               </div>
             </div>
@@ -188,9 +188,9 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
           <div class="column right">
             <div class="ui stackable grid">
               <div class="fourteen wide column">
-                <h2>LA EMPRESA</h2>
-                <p class="small">Renaissance Spirits nació del deseo de Jean-Sébastien Robicquet, Presidente fundador de Maison Villevert, de ofrecer a sus marcas, y a las marcas de sus colaboradores y amigos que comparten la misma vocación, una estructura comercial de desarrollo único y “a medida”.</p>
-                <p class="big">Al ser creadores de marcas internacionales de bebidas espirituosas desde hace más de quince años, hemos decidido extender nuestra actividad a la distribución en Francia y en la península ibérica.</p>
+                <h2 ob-language-default="LA EMPRESA">LA EMPRESA</h2>
+                <p class="small" ob-language-default="Renaissance Spirits nació del deseo de Jean-Sébastien Robicquet, Presidente fundador de Maison Villevert, de ofrecer a sus marcas, y a las marcas de sus colaboradores y amigos que comparten la misma vocación, una estructura comercial de desarrollo único y “a medida”.">Renaissance Spirits nació del deseo de Jean-Sébastien Robicquet, Presidente fundador de Maison Villevert, de ofrecer a sus marcas, y a las marcas de sus colaboradores y amigos que comparten la misma vocación, una estructura comercial de desarrollo único y “a medida”.</p>
+                <p class="big" ob-language-default="Al ser creadores de marcas internacionales de bebidas espirituosas desde hace más de quince años, hemos decidido extender nuestra actividad a la distribución en Francia y en la península ibérica.">Al ser creadores de marcas internacionales de bebidas espirituosas desde hace más de quince años, hemos decidido extender nuestra actividad a la distribución en Francia y en la península ibérica.</p>
                 <img src="img/photo_la_maniot.png" height="327" />
                 <img src="img/logo-rs-bleu.png" />
               </div>
@@ -204,11 +204,11 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
             <div class="ui stackable grid">
               <div class="five wide column"></div>
               <div class="eleven wide column">
-                  <h2>LA EMPRESA</h2>
-                  <p class="small">
+                  <h2 ob-language-default="LA EMPRESA">LA EMPRESA</h2>
+                  <p class="small" ob-language-default="Renaissance Spirits nació del deseo de Jean-Sébastien Robicquet, Presidente fundador de Maison Villevert, de ofrecer a sus marcas, y a aquellas pertenecientes a sus colaboradores y amigos que comparten la misma vocación, una estructura comercial de desarrollo único y “a medida”.">
                     Renaissance Spirits nació del deseo de Jean-Sébastien Robicquet, Presidente fundador de Maison Villevert, de ofrecer a sus marcas, y a aquellas pertenecientes a sus colaboradores y amigos que comparten la misma vocación, una estructura comercial de desarrollo único y “a medida”.
                   </p>
-                  <p class="big">
+                  <p class="big" ob-language-default="Al ser creadores de marcas internacionales de bebidas espirituosas desde hace más de quince años, hemos decidido extender nuestra actividad a la distribución en Francia y en la península ibérica.">
                     Al ser creadores de marcas internacionales de bebidas espirituosas desde hace más de quince años, hemos decidido extender nuestra actividad a la distribución en Francia y en la península ibérica.
                   </p>
 
@@ -220,16 +220,16 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
               <div class="fourteen wide column">
 
                 <img src="img/photo_la_maniot.png" height="327" />
-                <p class="big">
+                <p class="big" ob-language-default="Nous voulons être le premier choix pour les marques de spiritueux haut de gamme voulant pénétrer un marché et pour celles qui veulent passer un cap en termes d’ambition.">
                   Nous voulons être le premier choix pour les marques de spiritueux haut de gamme voulant pénétrer un marché et pour celles qui veulent passer un cap en termes d’ambition.
                 </p>
-                <p class="small">
+                <p class="small" ob-language-default="Notre expertise commerciale et notre engagement nous permettent de garantir à chaque marque un déploiement optimal et la mise en œuvre des plans d’actions leur permettant d’établir des relations uniques avec les consommateurs, prescripteurs ou clients.">
                   Notre expertise commerciale et notre engagement nous permettent de garantir à chaque marque un déploiement optimal et la mise en œuvre des plans d’actions leur permettant d’établir des relations uniques avec les consommateurs, prescripteurs ou clients.
                 </p>
-                <p class="big">
+                <p class="big" ob-language-default="Nous voulons être reconnus par nos clients, comme des interlocuteurs uniques, hautement professionnels et travaillants avec eux, de concert, pour maximiser le potentiel des marques que nous pilotons. C’est pourquoi, nous avons bâti des équipes commerciales sénior, rompues à l’industrie et ayant une forte expertise.">
                   Nous voulons être reconnus par nos clients, comme des interlocuteurs uniques, hautement professionnels et travaillants avec eux, de concert, pour maximiser le potentiel des marques que nous pilotons. C’est pourquoi, nous avons bâti des équipes commerciales sénior, rompues à l’industrie et ayant une forte expertise.
                 </p>
-                <p class="big">
+                <p class="big" ob-language-default="Nous collaborons avec les différents circuits de distribution avec un focus tout particulier sur le on-Trade,&#10;                  les caves, les grossistes et les acteurs du C &amp; C.">
                   Nous collaborons avec les différents circuits de distribution avec un focus tout particulier sur le on-Trade,
                   les caves, les grossistes et les acteurs du C &amp; C.
                 </p>
@@ -243,17 +243,17 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
 
     <div class="screen3acr"></div>
     <section class="screen3" id="actualites">
-      <h2>ÚLTIMAS NOTICIAS</h2>
-      <div class="actu left" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 4;"><div class="content"><img src="uploads/ARCO.jpg" alt="" title="" />
-<p class="title">G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID</p>
+      <h2 ob-language-default="ÚLTIMAS NOTICIAS">ÚLTIMAS NOTICIAS</h2>
+      <div class="actu center" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 4;"><div class="content"><img src="uploads/ARCO.jpg" alt="" title="" />
+<p class="title" ob-language-default="G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID">G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID</p>
 
 <p class="desc"></p>
 
 <section class="screen9">
             <img src="uploads/ARCO.jpg" alt="" title="" />
-            <div class="content"><h2>G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID</h2>
+            <div class="content"><h2 ob-language-default="G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID">G'VINE INSPIRA LA CREATIVIDAD EN ARCO - MADRID</h2>
 
-<p class="desc">ARCO, evento internacional primordial en el mundo del arte, reúne en cada edición a artistas con una visión diferenciadora y particular sobre el mundo. La reconocida arquitecta española Izaskun Chinchilla ha diseñado un espacio exclusivo inspirado en un piso parisino para recrear el universo G'Vine. Además, G'Vine ha invitado al artista francés Mr. Plant para mostrar en tiempo real proceso creativo en un proyecto artisticó inspirado en la filosofía de la marca.</p>
+<p class="desc" ob-language-default="ARCO, evento internacional primordial en el mundo del arte, reúne en cada edición a artistas con una visión diferenciadora y particular sobre el mundo. La reconocida arquitecta española Izaskun Chinchilla ha diseñado un espacio exclusivo inspirado en un piso parisino para recrear el universo G'Vine. Además, G'Vine ha invitado al artista francés Mr. Plant para mostrar en tiempo real proceso creativo en un proyecto artisticó inspirado en la filosofía de la marca.">ARCO, evento internacional primordial en el mundo del arte, reúne en cada edición a artistas con una visión diferenciadora y particular sobre el mundo. La reconocida arquitecta española Izaskun Chinchilla ha diseñado un espacio exclusivo inspirado en un piso parisino para recrear el universo G'Vine. Además, G'Vine ha invitado al artista francés Mr. Plant para mostrar en tiempo real proceso creativo en un proyecto artisticó inspirado en la filosofía de la marca.</p>
 <a href="http://renaissance-spirits.com/img/_DSC7785.JPG" target="_blank"><img alt="" src="uploads/STANDARCO.jpg" title="" /></a> <a href="http://renaissance-spirits.com/img/SNS_02©shehanhanwellage.com.jpg" target="_blank"><img alt="" src="uploads/GVINEBOTTLE.jpg" title="" /></a> <a href="http://renaissance-spirits.com/img/_DSC7897.jpg" target="_blank"><img alt="" src="uploads/GINTONIC.jpg" title="" /><img alt="" src="uploads/MRPLANT.jpg" title="" /></a>
 
 <div class="footer"><a href="uploads/ARCO.rar" target="_blank"><img src="img/PICTO_TELECHARGER.png" /></a></div>
@@ -261,20 +261,20 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
           </section>
 </div>
 
-<div class="button" style="display: none;"><img src="img/arrow_left.png" /></div>
+<div class="button"><img src="img/arrow_left.png" /></div>
 
-<div class="button right" style="display: none;"><img src="img/arrow_right.png" /></div>
+<div class="button right"><img src="img/arrow_right.png" /></div>
 </div>
-      <div class="actu center" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 10;">
+      <div class="actu right" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 3;">
         <div class="content">
           <img src="uploads/IKIBANA%20SARRIA.jpg" alt="" title="" />
-          <p class="title">INAUGURATION DEL IKIBANA SARRIA - BARCELONA</p>
+          <p class="title" ob-language-default="INAUGURATION DEL IKIBANA SARRIA - BARCELONA">INAUGURATION DEL IKIBANA SARRIA - BARCELONA</p>
 
           <section class="screen9">
             <img src="uploads/IKIBANA%20SARRIA.jpg" alt="" title="" />
             <div class="content">
-              <h2>INAUGURACION DEL IKIBANA SARRIA - BARCELONA</h2>
-              <p class="desc">Después del suceso del partnership con Mr Plant durante el evento Arco, G’Vine reitera esta colaboración en un lugar ya ineludible en Barcelona : el Ikibana Sarria. Un evento muy original en este restaurante “unconventional” mezclando cocina brasileña y japonesa en un ambiente típico de la noche de Barcelona. </p>
+              <h2 ob-language-default="INAUGURACION DEL IKIBANA SARRIA - BARCELONA" ob-language-pt="TEST PT 3">INAUGURACION DEL IKIBANA SARRIA - BARCELONA</h2>
+              <p class="desc" ob-language-default="Después del suceso del partnership con Mr Plant durante el evento Arco, G’Vine reitera esta colaboración en un lugar ya ineludible en Barcelona : el Ikibana Sarria. Un evento muy original en este restaurante “unconventional” mezclando cocina brasileña y japonesa en un ambiente típico de la noche de Barcelona.">Después del suceso del partnership con Mr Plant durante el evento Arco, G’Vine reitera esta colaboración en un lugar ya ineludible en Barcelona : el Ikibana Sarria. Un evento muy original en este restaurante “unconventional” mezclando cocina brasileña y japonesa en un ambiente típico de la noche de Barcelona. </p>
               <a href="http://renaissance-spirits.com/img/20160404_225202.JPG" target="_blank"><img src="uploads/IKIBANABAR.jpg" alt="" title="" /></a>
               <a href="http://renaissance-spirits.com/img/IMG_0706.jpg" target="_blank"></a>
               <a href="img/12801554_10156713505020058_2018079614531306683_n.jpg" target="_blank"><img src="uploads/IKIBANAPEOPLE.jpg" alt="" title="" /></a>
@@ -285,17 +285,17 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
             </div>
           </section>
         </div>
-        <div class="button" style=""><img src="img/arrow_left.png" /></div>
-        <div class="button right"><img src="img/arrow_right.png" /></div>
+        <div class="button" style="display: none;"><img src="img/arrow_left.png" /></div>
+        <div class="button right" style="display: none;"><img src="img/arrow_right.png" /></div>
       </div>
-      <div class="actu right" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 2;">
+      <div class="actu outright" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 2;">
         <div class="content"><img alt="" src="uploads/LACOTEGVINE.jpg" title="" />
-<p class="title">LA CÔTE BY G'VINE GIN</p>
+<p class="title" ob-language-default="LA CÔTE BY G'VINE GIN">LA CÔTE BY G'VINE GIN</p>
 <section class="screen9"><img src="uploads/LACOTEGVINE.jpg" alt="" title="" />
 <div class="content">
-<h2>LA CÔTE BY G'VIEN GIN</h2>
+<h2 ob-language-default="LA CÔTE BY G'VIEN GIN">LA CÔTE BY G'VIEN GIN</h2>
 
-<p class="desc">G’Vine cree un concepto de evento alrededor del verano y las vacaciones durante los 60’s para hoteles, discotecas y restaurantes los más de moda en España: Gymage Madrid, W Barcelona, Nikki Beach Marbella… La marca se inspira en la belleza del mar mediterráneo y las míticas casetas de playa francesas.</p>
+<p class="desc" ob-language-default="G’Vine cree un concepto de evento alrededor del verano y las vacaciones durante los 60’s para hoteles, discotecas y restaurantes los más de moda en España: Gymage Madrid, W Barcelona, Nikki Beach Marbella… La marca se inspira en la belleza del mar mediterráneo y las míticas casetas de playa francesas.">G’Vine cree un concepto de evento alrededor del verano y las vacaciones durante los 60’s para hoteles, discotecas y restaurantes los más de moda en España: Gymage Madrid, W Barcelona, Nikki Beach Marbella… La marca se inspira en la belleza del mar mediterráneo y las míticas casetas de playa francesas.</p>
 <a href="img/12802747_856902941088645_8052344722286598013_n.JPG" target="_blank"><img src="uploads/BAR.jpg" alt="" title="" /></a> <a href="img/10485731_858259697619636_3633925524068410595_o.jpg" target="_blank"><img src="uploads/PEOPLE.jpg" alt="" title="" /></a> <a href="img/12829169_858259967619609_3248705015599564087_o.jpg" target="_blank"><img src="uploads/PHOTOCALL.jpg" alt="" title="" /><img src="uploads/ROOFTOP.jpg" alt="" title="" /></a>
 
 <div class="footer"><a href="https://www.facebook.com/renaissancespirits/" target="_blank"></a> <a href="http://public.eurowinegate.com/data/public/b8b746.php" target="_blank"><img src="img/PICTO_TELECHARGER.png" /></a></div>
@@ -305,14 +305,14 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
         <div class="button" style="display: none;"><img src="img/arrow_left.png" /></div>
         <div class="button right" style="display: none;"><img src="img/arrow_right.png" /></div>
       </div>
-      <div class="actu outleft" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 1;">
+      <div class="actu left" data-date="2016" ob-duplicable="octoboot_duplicate_actu" style="display: block; z-index: 1;">
         <div class="content"><img src="uploads/LISBONBARSHOW2016.jpg" alt="" title="" />
-<p class="title">LISBON BAR SHOW 2016</p>
+<p class="title" ob-language-default="LISBON BAR SHOW 2016">LISBON BAR SHOW 2016</p>
 <section class="screen9"><img src="uploads/LISBONBARSHOW.jpg" alt="" title="" />
 <div class="content">
-<h2>LISBON BAR SHOW 2016</h2>
+<h2 ob-language-default="LISBON BAR SHOW 2016">LISBON BAR SHOW 2016</h2>
 
-<p class="desc">La tercera edición del Lisbon Bar Show confirmó la presencia de los mejores bartenders del mundo. Durante este evento las últimas tendencias de mixilogia, las principales innovaciones del mundo del coctel fueron abordadas. G’Vine tenía su propio stand de degustación.</p>
+<p class="desc" ob-language-default="La tercera edición del Lisbon Bar Show confirmó la presencia de los mejores bartenders del mundo. Durante este evento las últimas tendencias de mixilogia, las principales innovaciones del mundo del coctel fueron abordadas. G’Vine tenía su propio stand de degustación.">La tercera edición del Lisbon Bar Show confirmó la presencia de los mejores bartenders del mundo. Durante este evento las últimas tendencias de mixilogia, las principales innovaciones del mundo del coctel fueron abordadas. G’Vine tenía su propio stand de degustación.</p>
 <a href="http://renaissance-spirits.com/img/IMG_0629.JPG" target="_blank"><img src="uploads/COCKTAIL.jpg" alt="" title="" /></a> <a href="http://renaissance-spirits.com/img/IMG_0691.jpg" target="_blank"><img src="uploads/GVINEGINDEFRANCE.jpg" alt="" title="" /></a> <a href="http://renaissance-spirits.com/img/IMG_0710.jpg" target="_blank"><img src="uploads/BARLISBON.jpg" alt="" title="" /></a>
 
 <div class="footer"><a href="https://www.facebook.com/renaissancespirits/" target="_blank"></a> <a href="uploads/LISBON%20BAR%20SHOW%202016.rar" target="_blank"><img src="img/PICTO_TELECHARGER.png" /></a></div>
@@ -322,7 +322,7 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
         <div class="button" style="display: none;"><img src="img/arrow_left.png" /></div>
         <div class="button right" style="display: none;"><img src="img/arrow_right.png" /></div>
       </div>      <div class="dates">
-        <div class="date active" id="2016" ob-duplicable="octoboot_duplicate_date"><span>2016</span></div>
+        <div class="date active" id="2016" ob-duplicable="octoboot_duplicate_date"><span ob-language-default="2016">2016</span></div>
 
       </div>
 
@@ -333,45 +333,45 @@ tiendas especializadas, los mayoristas y los actores de C &amp; C.</p>
 
     <div class="screen8acr"></div>
     <section class="screen8" id="valeurs" style="background-image: url(&quot;uploads/NOS%20VALEURS-visuel%20iberia.jpg&quot;);">
-      <h1>NUESTROS VALORES</h1>
+      <h1 ob-language-default="NUESTROS VALORES">NUESTROS VALORES</h1>
 
-      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="1" /><div>EL COMPROMISO</div></div>
-      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="2" /><div>EL ESPIRITU EMPRESARIAL</div></div>
-      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="3" /><div>LA RECEPTIVIDAD</div></div>
-      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="4" /><div>LA EXCELENCIA</div></div>
+      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="1" /><div ob-language-default="EL COMPROMISO">EL COMPROMISO</div></div>
+      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="2" /><div ob-language-default="EL ESPIRITU EMPRESARIAL">EL ESPIRITU EMPRESARIAL</div></div>
+      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="3" /><div ob-language-default="LA RECEPTIVIDAD">LA RECEPTIVIDAD</div></div>
+      <div class="img"><img src="img/LOGO-RS-BLANC_VALEURS.png" data-id="4" /><div ob-language-default="LA EXCELENCIA">LA EXCELENCIA</div></div>
 
       <div class="cartouches">
        <div class="cartouche" style="display: none;">
-           <h3>EL COMPROMISO</h3>
-            <p>Existimos gracias a la implicación de las personas. Renaissance Spirits es una combinación de talentos, diferentes y complementarios, reunidos en una misma entidad. El trato humano es el eje central de la relación comercial que generamos al prestar una gran atención a cada cliente.<br />
+           <h3 ob-language-default="EL COMPROMISO">EL COMPROMISO</h3>
+            <p ob-language-default="Existimos gracias a la implicación de las personas. Renaissance Spirits es una combinación de talentos, diferentes y complementarios, reunidos en una misma entidad. El trato humano es el eje central de la relación comercial que generamos al prestar una gran atención a cada cliente.&#10;&#10;Somos una empresa comprometida con los acuerdos adquiridos tanto con nuestros colaboradores como con nuestros clientes, con quienes establecemos relaciones de respeto mutuo. Somos responsables ya que estamos en perfecta adecuación con el medio ambiente y las exigencias legales que enmarcan nuestra profesión.">Existimos gracias a la implicación de las personas. Renaissance Spirits es una combinación de talentos, diferentes y complementarios, reunidos en una misma entidad. El trato humano es el eje central de la relación comercial que generamos al prestar una gran atención a cada cliente.<br />
 <br />
 Somos una empresa comprometida con los acuerdos adquiridos tanto con nuestros colaboradores como con nuestros clientes, con quienes establecemos relaciones de respeto mutuo. Somos responsables ya que estamos en perfecta adecuación con el medio ambiente y las exigencias legales que enmarcan nuestra profesión.</p>
          </div>
 
          <div class="cartouche" style="display: none;">
-           <h3>EL ESPIRITU EMPRESARIAL</h3>
-            <p>Vivimos para los desafíos. Somos innovadores y pretendemos diferenciarnos siempre. Somos innovadores y pretendemos diferenciarnos siempre. Nuestro origen, Maison Villevert, fruto de la visión de Jean-Sébastien Robicquet, nos ortoga una identidad de emprededores. Como dueño de sus marcas, conocemos perfectamente las necesidades de un marca de lujo términos de cuidado al detalle, compromiso, implicación y excelencia para crear auténticas historias de éxito.<br />
+           <h3 ob-language-default="EL ESPIRITU EMPRESARIAL">EL ESPIRITU EMPRESARIAL</h3>
+            <p ob-language-default="Vivimos para los desafíos. Somos innovadores y pretendemos diferenciarnos siempre. Somos innovadores y pretendemos diferenciarnos siempre. Nuestro origen, Maison Villevert, fruto de la visión de Jean-Sébastien Robicquet, nos ortoga una identidad de emprededores. Como dueño de sus marcas, conocemos perfectamente las necesidades de un marca de lujo términos de cuidado al detalle, compromiso, implicación y excelencia para crear auténticas historias de éxito.&#10;&#10;Somos expertos en la construcción de marcas, contamos con un personal motivado, con experiencia en crear, desarrollar y dar vida a las marcas. Somos un equipo a escala humana, que progresa con un espíritu de empresa startup y una dedicación absoluta.">Vivimos para los desafíos. Somos innovadores y pretendemos diferenciarnos siempre. Somos innovadores y pretendemos diferenciarnos siempre. Nuestro origen, Maison Villevert, fruto de la visión de Jean-Sébastien Robicquet, nos ortoga una identidad de emprededores. Como dueño de sus marcas, conocemos perfectamente las necesidades de un marca de lujo términos de cuidado al detalle, compromiso, implicación y excelencia para crear auténticas historias de éxito.<br />
 <br />
 Somos expertos en la construcción de marcas, contamos con un personal motivado, con experiencia en crear, desarrollar y dar vida a las marcas. Somos un equipo a escala humana, que progresa con un espíritu de empresa startup y una dedicación absoluta.</p>
          </div>
 
          <div class="cartouche" style="display: none;">
-           <h3>LA RECEPTIVIDAD</h3>
-            <p>Proporcionamos los conocimientos expertos y la profesionalidad de grandes grupos y, a la vez, aportamos la proximidad, la capacidad de respuesta y la flexibilidad que caracterizan a las pequeñas empresas. Gracias al respaldo de Maison Villevert, disponemos de todos los componentes de una empresa familiar cuya ambición es duplicar su tamaño en los próximos cinco años.<br />
+           <h3 ob-language-default="LA RECEPTIVIDAD">LA RECEPTIVIDAD</h3>
+            <p ob-language-default="Proporcionamos los conocimientos expertos y la profesionalidad de grandes grupos y, a la vez, aportamos la proximidad, la capacidad de respuesta y la flexibilidad que caracterizan a las pequeñas empresas. Gracias al respaldo de Maison Villevert, disponemos de todos los componentes de una empresa familiar cuya ambición es duplicar su tamaño en los próximos cinco años.&#10;&#10;Prestamos atención y dedicamos tiempo y disponibilidad a cada uno de nuestros colaboradores, con el fin de valorizar el potencial y la historia de su marca. Sabemos que los éxitos se construyen y perduran gracias a importantes esfuerzos humanos en cuestión de tiempo, motivación y energía.">Proporcionamos los conocimientos expertos y la profesionalidad de grandes grupos y, a la vez, aportamos la proximidad, la capacidad de respuesta y la flexibilidad que caracterizan a las pequeñas empresas. Gracias al respaldo de Maison Villevert, disponemos de todos los componentes de una empresa familiar cuya ambición es duplicar su tamaño en los próximos cinco años.<br />
 <br />
 Prestamos atención y dedicamos tiempo y disponibilidad a cada uno de nuestros colaboradores, con el fin de valorizar el potencial y la historia de su marca. Sabemos que los éxitos se construyen y perduran gracias a importantes esfuerzos humanos en cuestión de tiempo, motivación y energía.</p>
          </div>
 
          <div class="cartouche" style="display: none;">
-           <h3>LA EXCELENCIA </h3>
-            <p>Nos exigimos un nivel de servicio irreprochable y estamos siempre atentos a los mercados que llevamos. Aprendemos del pasado para anticipar el futuro y para aportar una auténtica alternativa a la distribución tradicional.Pensamos en las marcas y en el negocio de mañana.<br />
+           <h3 ob-language-default="LA EXCELENCIA">LA EXCELENCIA </h3>
+            <p ob-language-default="Nos exigimos un nivel de servicio irreprochable y estamos siempre atentos a los mercados que llevamos. Aprendemos del pasado para anticipar el futuro y para aportar una auténtica alternativa a la distribución tradicional.Pensamos en las marcas y en el negocio de mañana.">Nos exigimos un nivel de servicio irreprochable y estamos siempre atentos a los mercados que llevamos. Aprendemos del pasado para anticipar el futuro y para aportar una auténtica alternativa a la distribución tradicional.Pensamos en las marcas y en el negocio de mañana.<br />
  </p>
          </div>
        </div>    </section>
 
     <div class="screen4acr"></div>
     <section class="screen4" id="marques">
-      <h2>UNA COLECCIÓN DE MARCAS EXCLUSIVAS</h2>
+      <h2 ob-language-default="UNA COLECCIÓN DE MARCAS EXCLUSIVAS">UNA COLECCIÓN DE MARCAS EXCLUSIVAS</h2>
       <div class="bouteilles">
         <div class="content">
           <img class="background" src="img/ombre_bouteilles_v2.png" />
@@ -381,7 +381,7 @@ Prestamos atención y dedicamos tiempo y disponibilidad a cada uno de nuestros c
           <img data-id="1" class="bouteille" src="img/LQVR-ExtraDry750-HR.png" style="top: -181px; left: 745px; height: 275px;" alt="" title="" /><img data-id="1" class="bouteille" src="img/LQVR-Blanc750-HR.png" style="top: -181px; left: 655px; height: 290px;" alt="" title="" /><img data-id="1" class="bouteille" src="img/LQVR-Rouge750-HR.png" style="top: -181px; left: 562px; height: 306px;" />
         </div>
       </div>
-      <div class="click">Cliquez sur une marque</div>
+      <div class="click" ob-language-default="Cliquez sur une marque">Cliquez sur une marque</div>
     </section>
 
     <section class="screen5">
@@ -391,13 +391,13 @@ Prestamos atención y dedicamos tiempo y disponibilidad a cada uno de nuestros c
             <div class="content">
               <div class="logo"><img src="img/logo_gvine.png" alt="logo" /></div>
               <div class="title">
-                <h2>TRADITIONALLY UNCONVENTIONAL</h2>
-                <p>G’Vine es una ginebra francesa única, elaborada en la región de Cognac a partir de alcohol de uva<br />
+                <h2 ob-language-default="TRADITIONALLY UNCONVENTIONAL">TRADITIONALLY UNCONVENTIONAL</h2>
+                <p ob-language-default="G’Vine es una ginebra francesa única, elaborada en la región de Cognac a partir de alcohol de uva&#10;macerada con diez plantas y especias aromáticas, entre las que se encuentra la flor de uva que&#10;realza su carácter excepcional.">G’Vine es una ginebra francesa única, elaborada en la región de Cognac a partir de alcohol de uva<br />
 macerada con diez plantas y especias aromáticas, entre las que se encuentra la flor de uva que<br />
 realza su carácter excepcional.</p>
               </div>
               <div class="button_rs_out">
-                <div class="button_rs_in">Saber más...</div>
+                <div class="button_rs_in" ob-language-default="Saber más...">Saber más...</div>
               </div>
             </div>
             <section class="screen10"><div class="ui container">
@@ -416,20 +416,20 @@ realza su carácter excepcional.</p>
 
 <div class="column justify">
 <div class="text">
-<p class="title"><span>G'VINE</span><br />
+<p class="title" ob-language-default="Floraison"><span ob-language-default="G'VINE">G'VINE</span><br />
 Floraison</p>
 
-<p>GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.</p>
+<p ob-language-default="GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.">GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.</p>
 
-<p>FLORAISON - Fresca y floral..</p>
+<p ob-language-default="FLORAISON - Fresca y floral..">FLORAISON - Fresca y floral..</p>
 
-<p>Floraison es el momento clave en el ciclo vital de la uva, es el nombre perfecto para un gin fresco y floral, suave y redondo, G’Vine Floraison evoca la esencia de la primavera cuando florecen las flores de uva.<u></u><u></u></p>
+<p ob-language-default="Floraison es el momento clave en el ciclo vital de la uva, es el nombre perfecto para un gin fresco y floral, suave y redondo, G’Vine Floraison evoca la esencia de la primavera cuando florecen las flores de uva.">Floraison es el momento clave en el ciclo vital de la uva, es el nombre perfecto para un gin fresco y floral, suave y redondo, G’Vine Floraison evoca la esencia de la primavera cuando florecen las flores de uva.<u></u><u></u></p>
 
-<p>Un gin único que seduce tanto a los amantes del mundo de la ginebra como a los paladares más noveles. Floraison resulta ideal servida en un refrescante Gin &amp; Tonic como en un cóctel veraniego.</p>
+<p ob-language-default="Un gin único que seduce tanto a los amantes del mundo de la ginebra como a los paladares más noveles. Floraison resulta ideal servida en un refrescante Gin &amp; Tonic como en un cóctel veraniego.">Un gin único que seduce tanto a los amantes del mundo de la ginebra como a los paladares más noveles. Floraison resulta ideal servida en un refrescante Gin &amp; Tonic como en un cóctel veraniego.</p>
 
-<a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
+<a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
 
-<a href="http://g-vine.com/es/" target="_blank"><div class="button right">Visite el sitio web</div></a>
+<a href="http://g-vine.com/es/" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
 </div>
 </div>
 </div>
@@ -441,20 +441,20 @@ Floraison</p>
 
 <div class="column justify">
 <div class="text">
-<p class="title"><span>G'VINE</span><br />
+<p class="title" ob-language-default="Nouaison"><span ob-language-default="G'VINE">G'VINE</span><br />
 Nouaison</p>
 
-<p>GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.</p>
+<p ob-language-default="GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.">GIN LLENO DE ESTILO, DESTILADO CON UVA E INFUSIONADO CON SU PROPRIA FLOR.</p>
 
-<p>NOUAISON -  Intensa y Especiada.</p>
+<p ob-language-default="NOUAISON -  Intensa y Especiada.">NOUAISON -  Intensa y Especiada.</p>
 
-<p>Nouaison captura la vitalidad de la uva, al ser la etapa de la metamorfosis de las perfumadas flores en sabrosas bayas de uvas.</p>
+<p ob-language-default="Nouaison captura la vitalidad de la uva, al ser la etapa de la metamorfosis de las perfumadas flores en sabrosas bayas de uvas.">Nouaison captura la vitalidad de la uva, al ser la etapa de la metamorfosis de las perfumadas flores en sabrosas bayas de uvas.</p>
 
-<p>Cálida, intensa y especiada, G’Vine Nouaison es una alternativa original y elegante para los aficionadas del tradicional dry gin. Con su impresionante 43,9% de graduación alcohólica y una rica sensación en boca, constituye un gin perfecto para cócteles clásicos como el Negroni y cócteles de autor.</p>
+<p ob-language-default="Cálida, intensa y especiada, G’Vine Nouaison es una alternativa original y elegante para los aficionadas del tradicional dry gin. Con su impresionante 43,9% de graduación alcohólica y una rica sensación en boca, constituye un gin perfecto para cócteles clásicos como el Negroni y cócteles de autor.">Cálida, intensa y especiada, G’Vine Nouaison es una alternativa original y elegante para los aficionadas del tradicional dry gin. Con su impresionante 43,9% de graduación alcohólica y una rica sensación en boca, constituye un gin perfecto para cócteles clásicos como el Negroni y cócteles de autor.</p>
 
-<a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"></a><a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
+<a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"></a><a href="uploads/Fiches_Esp_Gvine.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
 
-<a href="http://g-vine.com/es/" target="_blank"><div class="button right">Visite el sitio web</div></a>
+<a href="http://g-vine.com/es/" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
 </div>
 </div>
 </div>
@@ -477,14 +477,14 @@ Nouaison</p>
             <div class="content">
               <div class="logo"><img src="img/vermouth_logo.png" alt="logo" height="209" /></div>
               <div class="title">
-                <h2>EL RENACER DEL VERMUT</h2>
-                <p>Elaborado en pleno corazón de la región de Charente, La Quintinye Vermouth Royal es un elegante y<br />
+                <h2 ob-language-default="EL RENACER DEL VERMUT">EL RENACER DEL VERMUT</h2>
+                <p ob-language-default="Elaborado en pleno corazón de la región de Charente, La Quintinye Vermouth Royal es un elegante y&#10;delicado vermut francés con aromas ricos y opulentos, fruto de una mezcla única de vinos y de&#10;Pineau des Charentes. Su buqué único de plantas y especias convierten a La Quintinye Vermouth&#10;Royal en un vermut magnífico tanto para el aperitivo como en cócteles.">Elaborado en pleno corazón de la región de Charente, La Quintinye Vermouth Royal es un elegante y<br />
 delicado vermut francés con aromas ricos y opulentos, fruto de una mezcla única de vinos y de<br />
 Pineau des Charentes. Su buqué único de plantas y especias convierten a La Quintinye Vermouth<br />
 Royal en un vermut magnífico tanto para el aperitivo como en cócteles.</p>
               </div>
               <div class="button_rs_out">
-                <div class="button_rs_in">Saber más...</div>
+                <div class="button_rs_in" ob-language-default="Saber más...">Saber más...</div>
               </div>
             </div>
 
@@ -501,11 +501,11 @@ Royal en un vermut magnífico tanto para el aperitivo como en cócteles.</p>
                       <div class="column"><img src="uploads/LQVRROUGE.jpg" alt="" title="" /></div>
                       <div class="column justify">
                         <div class="text">
-                          <p class="title"><span>La Quintinye<br />VERMOUTH ROYAL</span><br />Le Rouge</p>
-                          <p>La Quintinye Vermouth Royal Rouge está elorado con unas impresionantes 28 plantas y especias, junto con una base de Pineau de Charentes tinto mezclado con vinos blancos cuidadosamente seleccionados. Este precioso elixir desprende notas licorosas en armonía con ciruelas frescas, vainilla, chocolate y tofe.</p>
-                          <p>Sabroso, intenso y extraordinariamente persistente en boca, es un ingrediente indispensable del Royal Negroni.</p>
-                          <a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                          <a href="http://laquintinyevermouthroyal.com/fr/" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                          <p class="title" ob-language-default="Le Rouge"><span ob-language-default="La QuintinyeVERMOUTH ROYAL">La Quintinye<br />VERMOUTH ROYAL</span><br />Le Rouge</p>
+                          <p ob-language-default="La Quintinye Vermouth Royal Rouge está elorado con unas impresionantes 28 plantas y especias, junto con una base de Pineau de Charentes tinto mezclado con vinos blancos cuidadosamente seleccionados. Este precioso elixir desprende notas licorosas en armonía con ciruelas frescas, vainilla, chocolate y tofe.">La Quintinye Vermouth Royal Rouge está elorado con unas impresionantes 28 plantas y especias, junto con una base de Pineau de Charentes tinto mezclado con vinos blancos cuidadosamente seleccionados. Este precioso elixir desprende notas licorosas en armonía con ciruelas frescas, vainilla, chocolate y tofe.</p>
+                          <p ob-language-default="Sabroso, intenso y extraordinariamente persistente en boca, es un ingrediente indispensable del Royal Negroni.">Sabroso, intenso y extraordinariamente persistente en boca, es un ingrediente indispensable del Royal Negroni.</p>
+                          <a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                          <a href="http://laquintinyevermouthroyal.com/fr/" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                         </div>
                       </div>
                     </div>
@@ -515,19 +515,19 @@ Royal en un vermut magnífico tanto para el aperitivo como en cócteles.</p>
                     <div class="ui two column stackable grid">
                       <div class="column"><img src="img/PHOTO_VERMOUTH_BLANC.jpg" /></div>
                       <div class="column justify"><div class="text">
-<p class="title"><span>La Quintinye<br />
+<p class="title" ob-language-default="Le Blanc"><span ob-language-default="La Quintinye&#10;VERMOUTH ROYAL">La Quintinye<br />
 VERMOUTH ROYAL</span><br />
 Le Blanc</p>
 
-<p>La sutil mezcla de un buqué único de 18 botánicos con Pineau des Charentes blanco y vinos blancos cuidadosamente seleccionados, convierten La QUintinye Vermouth Royal Blanc en un néctar suntuosamente integrado y sabroso.</p>
+<p ob-language-default="La sutil mezcla de un buqué único de 18 botánicos con Pineau des Charentes blanco y vinos blancos cuidadosamente seleccionados, convierten La QUintinye Vermouth Royal Blanc en un néctar suntuosamente integrado y sabroso.">La sutil mezcla de un buqué único de 18 botánicos con Pineau des Charentes blanco y vinos blancos cuidadosamente seleccionados, convierten La QUintinye Vermouth Royal Blanc en un néctar suntuosamente integrado y sabroso.</p>
 
-<p>Fresco y subtíl, se traduce en notas cítricas y tropicales con un recuerdo a fruta confitada acompañado de notas balsámicas.</p>
+<p ob-language-default="Fresco y subtíl, se traduce en notas cítricas y tropicales con un recuerdo a fruta confitada acompañado de notas balsámicas.">Fresco y subtíl, se traduce en notas cítricas y tropicales con un recuerdo a fruta confitada acompañado de notas balsámicas.</p>
 
-<p>Le Blanc puede servirse como aperitivo, fresco o con hielo, con una cáscara de naranja y también es un ingrediente exquisito del Royal Vesper.</p>
+<p ob-language-default="Le Blanc puede servirse como aperitivo, fresco o con hielo, con una cáscara de naranja y también es un ingrediente exquisito del Royal Vesper.">Le Blanc puede servirse como aperitivo, fresco o con hielo, con una cáscara de naranja y también es un ingrediente exquisito del Royal Vesper.</p>
 
-<div class="button"><a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank">Descargar la hoja de producto</a></div>
+<div class="button"><a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</a></div>
 
-<div class="button right right"><a href="http://laquintinyevermouthroyal.com/fr/" target="_blank">Visite el sitio web</a></div>
+<div class="button right right"><a href="http://laquintinyevermouthroyal.com/fr/" target="_blank" ob-language-default="Visite el sitio web">Visite el sitio web</a></div>
 </div>
 </div>
                     </div>
@@ -538,11 +538,11 @@ Le Blanc</p>
                       <div class="column"><img src="uploads/LQVREXTRADRY.jpg" alt="" title="" /></div>
                       <div class="column justify">
                         <div class="text">
-                          <p class="title"><span>La Quintinye<br />VERMOUTH ROYAL</span><br />L'Extra Dry</p>
-                          <p>La Quintinye Vermouth Royal Extra Dry, gracias a su fantástico abanico de 27 botánicos, y a su base de Pineau des Charentes blanco mezclado con vinos blancos cuidadosamente seleccionados, es fresco e intenso con notas florales y de cítricos.</p>
-                          <p>Se impone como ingrediente estrella en los cócteles clásicos como es el Royal Dry Martini.</p>
-                          <a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                          <a href="http://laquintinyevermouthroyal.com/fr/" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                          <p class="title" ob-language-default="L'Extra Dry"><span ob-language-default="La QuintinyeVERMOUTH ROYAL">La Quintinye<br />VERMOUTH ROYAL</span><br />L'Extra Dry</p>
+                          <p ob-language-default="La Quintinye Vermouth Royal Extra Dry, gracias a su fantástico abanico de 27 botánicos, y a su base de Pineau des Charentes blanco mezclado con vinos blancos cuidadosamente seleccionados, es fresco e intenso con notas florales y de cítricos.">La Quintinye Vermouth Royal Extra Dry, gracias a su fantástico abanico de 27 botánicos, y a su base de Pineau des Charentes blanco mezclado con vinos blancos cuidadosamente seleccionados, es fresco e intenso con notas florales y de cítricos.</p>
+                          <p ob-language-default="Se impone como ingrediente estrella en los cócteles clásicos como es el Royal Dry Martini.">Se impone como ingrediente estrella en los cócteles clásicos como es el Royal Dry Martini.</p>
+                          <a href="uploads/Fiches_Esp_Vermouth.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                          <a href="http://laquintinyevermouthroyal.com/fr/" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                         </div>
                       </div>
                     </div>
@@ -566,14 +566,14 @@ Le Blanc</p>
             <div class="content">
               <div class="logo"><img src="img/tequila_logo.png" alt="logo" height="64" /></div>
               <div class="title">
-                <h2>TEQUILA GRAND CRU</h2>
-                <p>Excellia Tequila se elabora exclusivamente a partir de agave azul y se somete a un proceso único de<br />
+                <h2 ob-language-default="TEQUILA GRAND CRU">TEQUILA GRAND CRU</h2>
+                <p ob-language-default="Excellia Tequila se elabora exclusivamente a partir de agave azul y se somete a un proceso único de&#10;envejecimiento doble en barricas de Cognac XO, por una parte y de Sauternes Grand Cru,&#10;por otra. Excellia Tequila es un tequila Grand Cru, elegante y sofisticado, que carateriza un auténtico&#10;tequila de cata francesa.">Excellia Tequila se elabora exclusivamente a partir de agave azul y se somete a un proceso único de<br />
 envejecimiento doble en barricas de Cognac XO, por una parte y de Sauternes Grand Cru,<br />
 por otra. Excellia Tequila es un tequila Grand Cru, elegante y sofisticado, que carateriza un auténtico<br />
 tequila de cata francesa.</p>
               </div>
               <div class="button_rs_out">
-                <div class="button_rs_in">Saber más...</div>
+                <div class="button_rs_in" ob-language-default="Saber más...">Saber más...</div>
               </div>
             </div>
 
@@ -582,7 +582,7 @@ tequila de cata francesa.</p>
                 <div class="menu" style="display: none;">
                   <div><div class="line"></div></div>
                   <div class="active"><div class="line"></div></div>
-                  <div class=""></div>
+                  <div></div>
                 </div>
                 <div class="slides">
 
@@ -591,12 +591,12 @@ tequila de cata francesa.</p>
                       <div class="column"><img src="img/PHOTO_EXCELLIA_BLANCO.jpg" /></div>
                       <div class="column justify">
                         <div class="text">
-                          <p class="title"><span>EXCELLIA</span><br />Blanco</p>
-                          <p>Envejecido tres semanas en barricas de vino grand cru Sauternes y en barricas de Cognac XO, Excellia Blanco es claro con un ligero toque de sombra dorada. La nariz desvela notas de clavo, tabaco y brioche.</p>
-                          <p>En el paladar, Excellia Blanco es complejo con una mezcla de aromas de especias, vainilla, fruta y cuero. El acabado en boca es largo en el centro del paladar y presenta notas sutiles de jazmín y especias secas.</p>
-                          <p>Excellia Blanco se atreve a usar, de manera experta, los sabores delicados que normalmente sólo se ven en un tequila añejo o un extra-añejo, sin perder el enfoque clásico ni la fuerza de la categoría Blanco.</p>
-                          <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                          <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                          <p class="title" ob-language-default="Blanco"><span ob-language-default="EXCELLIA">EXCELLIA</span><br />Blanco</p>
+                          <p ob-language-default="Envejecido tres semanas en barricas de vino grand cru Sauternes y en barricas de Cognac XO, Excellia Blanco es claro con un ligero toque de sombra dorada. La nariz desvela notas de clavo, tabaco y brioche.">Envejecido tres semanas en barricas de vino grand cru Sauternes y en barricas de Cognac XO, Excellia Blanco es claro con un ligero toque de sombra dorada. La nariz desvela notas de clavo, tabaco y brioche.</p>
+                          <p ob-language-default="En el paladar, Excellia Blanco es complejo con una mezcla de aromas de especias, vainilla, fruta y cuero. El acabado en boca es largo en el centro del paladar y presenta notas sutiles de jazmín y especias secas.">En el paladar, Excellia Blanco es complejo con una mezcla de aromas de especias, vainilla, fruta y cuero. El acabado en boca es largo en el centro del paladar y presenta notas sutiles de jazmín y especias secas.</p>
+                          <p ob-language-default="Excellia Blanco se atreve a usar, de manera experta, los sabores delicados que normalmente sólo se ven en un tequila añejo o un extra-añejo, sin perder el enfoque clásico ni la fuerza de la categoría Blanco.">Excellia Blanco se atreve a usar, de manera experta, los sabores delicados que normalmente sólo se ven en un tequila añejo o un extra-añejo, sin perder el enfoque clásico ni la fuerza de la categoría Blanco.</p>
+                          <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                          <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                         </div>
                       </div>
                     </div>
@@ -607,12 +607,12 @@ tequila de cata francesa.</p>
                         <div class="column"><img src="img/PHOTO_EXCELLIA_ANEJO.jpg" /></div>
                         <div class="column justify">
                           <div class="text">
-                              <p class="title"><span>EXCELLIA</span><br />Añejo</p>
-                              <p>Envejecido durante dieciocho meses, Excellia Añejo desprende aromas de vino de postre con notas envolventes de ranciedad, especias y hierbas tostadas, de cuero y sándalo.</p>
-                              <p>En boca es intenso y redondo con un matiz amaderado asociado con notas de especias frescas y pimenta. El acabado en boca es gradual, largo y equilibrado y revela notas de cacao y frutas del huerto.</p>
-                              <p>Excellia es un tequila añejo único que se desmarca de las típicas notas de vainilla y miel de los clásicos tequilas añejos. Opta por un excellente y desafiente perfil aromático que cambia por completo el status quo de la categoría.</p>
-                              <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                              <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                              <p class="title" ob-language-default="Añejo"><span ob-language-default="EXCELLIA">EXCELLIA</span><br />Añejo</p>
+                              <p ob-language-default="Envejecido durante dieciocho meses, Excellia Añejo desprende aromas de vino de postre con notas envolventes de ranciedad, especias y hierbas tostadas, de cuero y sándalo.">Envejecido durante dieciocho meses, Excellia Añejo desprende aromas de vino de postre con notas envolventes de ranciedad, especias y hierbas tostadas, de cuero y sándalo.</p>
+                              <p ob-language-default="En boca es intenso y redondo con un matiz amaderado asociado con notas de especias frescas y pimenta. El acabado en boca es gradual, largo y equilibrado y revela notas de cacao y frutas del huerto.">En boca es intenso y redondo con un matiz amaderado asociado con notas de especias frescas y pimenta. El acabado en boca es gradual, largo y equilibrado y revela notas de cacao y frutas del huerto.</p>
+                              <p ob-language-default="Excellia es un tequila añejo único que se desmarca de las típicas notas de vainilla y miel de los clásicos tequilas añejos. Opta por un excellente y desafiente perfil aromático que cambia por completo el status quo de la categoría.">Excellia es un tequila añejo único que se desmarca de las típicas notas de vainilla y miel de los clásicos tequilas añejos. Opta por un excellente y desafiente perfil aromático que cambia por completo el status quo de la categoría.</p>
+                              <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                              <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                           </div>
                         </div>
                       </div>
@@ -623,11 +623,11 @@ tequila de cata francesa.</p>
                       <div class="column"><img src="img/PHOTO_EXCELLIA_REPOSADO.jpg" /></div>
                       <div class="column justify">
                         <div class="text">
-                          <p class="title"><span>EXCELLIA</span><br />Reposado</p>
-                          <p>Con su color de paja dorada, Excellia Reposado revela un aroma complejo que mezcla notas de miel, madera tostada, setas, lavanda seca, jazmín y violeta. El envejecimiento de nueve meses en barricas de Cognac y de vino grand cru Sauternes proporciona una sensación rodonda y extensa en boca con ricas notas de miel, de puros, de calabaza y agave caramelizado, mezcladas con un rancio sutil y frutas del huerto. El acabado en boca es largo y generoso con notas especiadas y arenosas.</p>
-                          <p>Respetando las características de un tequila producido en la región de "Los Altos", Excellia revela aromas sorprendentes e innovadores gracias a su envejecimiento único.</p>
-                          <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                          <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                          <p class="title" ob-language-default="Reposado"><span ob-language-default="EXCELLIA">EXCELLIA</span><br />Reposado</p>
+                          <p ob-language-default="Con su color de paja dorada, Excellia Reposado revela un aroma complejo que mezcla notas de miel, madera tostada, setas, lavanda seca, jazmín y violeta. El envejecimiento de nueve meses en barricas de Cognac y de vino grand cru Sauternes proporciona una sensación rodonda y extensa en boca con ricas notas de miel, de puros, de calabaza y agave caramelizado, mezcladas con un rancio sutil y frutas del huerto. El acabado en boca es largo y generoso con notas especiadas y arenosas.">Con su color de paja dorada, Excellia Reposado revela un aroma complejo que mezcla notas de miel, madera tostada, setas, lavanda seca, jazmín y violeta. El envejecimiento de nueve meses en barricas de Cognac y de vino grand cru Sauternes proporciona una sensación rodonda y extensa en boca con ricas notas de miel, de puros, de calabaza y agave caramelizado, mezcladas con un rancio sutil y frutas del huerto. El acabado en boca es largo y generoso con notas especiadas y arenosas.</p>
+                          <p ob-language-default="Respetando las características de un tequila producido en la región de &quot;Los Altos&quot;, Excellia revela aromas sorprendentes e innovadores gracias a su envejecimiento único.">Respetando las características de un tequila producido en la región de "Los Altos", Excellia revela aromas sorprendentes e innovadores gracias a su envejecimiento único.</p>
+                          <a href="uploads/Fiches_Esp_Excellia.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                          <a href="http://www.excelliatequila.com/?lang=FR" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                         </div>
                       </div>
                     </div>
@@ -652,16 +652,16 @@ tequila de cata francesa.</p>
             <div class="content"><div class="logob"><img alt="logo" src="img/liqueur_logo.png" /></div>
 
 <div class="title">
-<h2>WHEN LIFE BLOSSOMS</h2>
+<h2 ob-language-default="WHEN LIFE BLOSSOMS">WHEN LIFE BLOSSOMS</h2>
 
-<p class="cke_focus">Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando<br />
+<p class="cke_focus" ob-language-default="Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando&#10;florece la vida. Delicado e intenso, JUNE® es un licor único elaborado a partir de una selección de flores de uva,&#10;donde cada variedad de uva (Flores de Ugni Blanc, Merlot y Cabernet Sauvignon) proporciona unos aromas&#10;específicos. Refrescante, refinado e único, JUNE® es un magnifico elixir.">Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando<br />
 florece la vida. Delicado e intenso, JUNE® es un licor único elaborado a partir de una selección de flores de uva,<br />
 donde cada variedad de uva (Flores de Ugni Blanc, Merlot y Cabernet Sauvignon) proporciona unos aromas<br />
 específicos. Refrescante, refinado e único, JUNE® es un magnifico elixir.</p>
 </div>
 
 <div class="button_rs_out">
-<div class="button_rs_in">Saber más...</div>
+<div class="button_rs_in" ob-language-default="Saber más...">Saber más...</div>
 </div>
 </div>
 
@@ -675,13 +675,13 @@ específicos. Refrescante, refinado e único, JUNE® es un magnifico elixir.</p
                       <div class="column"><img src="img/PHOTO_JUNE.jpg" /></div>
                       <div class="column justify">
                         <div class="text">
-                          <p class="title"><span>JUNE®</span><br />Liqueur</p>
-                          <p>CUANDO FLORECE LA VIDA</p>
-                          <p>Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando florece la vida.</p>
-                          <p>Delicado e intenso, JUNE® es un licor único elaborado a partir de una selección de flores de uva, donde cada variedad de uva (Flores de Ugni Blanc, Merlot y Cabernet Sauvignon) proporciona unos aromas específicos.</p>
-                          <p>Refrescante, refinado e único, JUNE® es un magnifico elixir.</p>
-                          <a href="uploads/Fiches_Esp_June.pdf" target="_blank"><div class="button">Descargar la hoja de producto</div></a>
-                          <a href="http://www.juneliqueur.com/" target="_blank"><div class="button right">Visite el sitio web</div></a>
+                          <p class="title" ob-language-default="Liqueur"><span ob-language-default="JUNE®">JUNE®</span><br />Liqueur</p>
+                          <p ob-language-default="CUANDO FLORECE LA VIDA">CUANDO FLORECE LA VIDA</p>
+                          <p ob-language-default="Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando florece la vida.">Luminoso, cálido y vibrante, el licor JUNE® capta las emociones de ese momento precioso, cuando florece la vida.</p>
+                          <p ob-language-default="Delicado e intenso, JUNE® es un licor único elaborado a partir de una selección de flores de uva, donde cada variedad de uva (Flores de Ugni Blanc, Merlot y Cabernet Sauvignon) proporciona unos aromas específicos.">Delicado e intenso, JUNE® es un licor único elaborado a partir de una selección de flores de uva, donde cada variedad de uva (Flores de Ugni Blanc, Merlot y Cabernet Sauvignon) proporciona unos aromas específicos.</p>
+                          <p ob-language-default="Refrescante, refinado e único, JUNE® es un magnifico elixir.">Refrescante, refinado e único, JUNE® es un magnifico elixir.</p>
+                          <a href="uploads/Fiches_Esp_June.pdf" target="_blank"><div class="button" ob-language-default="Descargar la hoja de producto">Descargar la hoja de producto</div></a>
+                          <a href="http://www.juneliqueur.com/" target="_blank"><div class="button right" ob-language-default="Visite el sitio web">Visite el sitio web</div></a>
                         </div>
                       </div>
                     </div>
@@ -712,7 +712,7 @@ específicos. Refrescante, refinado e único, JUNE® es un magnifico elixir.</p
     </div>
 
     <section class="screen12">
-      <p>Tenemos un alto nivel de atención y de exigencia, buscando siempre la excelencia en<br />
+      <p ob-language-default="Tenemos un alto nivel de atención y de exigencia, buscando siempre la excelencia en&#10;nuestras marcas de nuestros colaboradores. Gestionamos una cartera diferenciada, presente en las categorías claves,&#10;pero a tamanó limitado a proposito. Nuestros equipos son integrados y tienen una experiencia reconocida en el sector.&#10;Entablamos intercambios fructuosos con nuestros clientes y nuestros colaboradores, y garantizamos&#10;una relación comercial duradera que pasa por la creación de valores y por el desarollo.">Tenemos un alto nivel de atención y de exigencia, buscando siempre la excelencia en<br />
 nuestras marcas de nuestros colaboradores. Gestionamos una cartera diferenciada, presente en las categorías claves,<br />
 pero a tamanó limitado a proposito. Nuestros equipos son integrados y tienen una experiencia reconocida en el sector.<br />
 Entablamos intercambios fructuosos con nuestros clientes y nuestros colaboradores, y garantizamos<br />
@@ -721,23 +721,23 @@ una relación comercial duradera que pasa por la creación de valores y por el d
 
     <div class="screen6acr"></div>
     <section class="screen6" id="contact">
-      <h2>NUESTRO EQUIPO</h2>
+      <h2 ob-language-default="NUESTRO EQUIPO">NUESTRO EQUIPO</h2>
       <div class="ui five column stackable grid">
         <div class="centered column row" ob-duplicable="true">
             <div class="column" ob-duplicable="true">
               <img src="img/fabien_callais.jpg" />
               <div class="bar"></div>
-              <p>Fabien CALLAIS<br />
+              <p ob-language-default="Fabien CALLAIS&#10;Country Manager">Fabien CALLAIS<br />
 Country Manager</p>
             </div><div class="column" ob-duplicable="true">
               <img src="img/ian_ferri.jpg" alt="" title="" />
               <div class="bar"></div>
-              <p>Ian FERRI<br />
+              <p ob-language-default="Ian FERRI&#10;Marketing Manager">Ian FERRI<br />
 Marketing Manager</p>
             </div><div class="column" ob-duplicable="true"><img alt="" src="uploads/photo_SAS.png" title="" />
 <div class="bar"></div>
 
-<p>Solange ALLIOT SOTO<br />
+<p ob-language-default="Solange ALLIOT SOTO&#10;Trade Marketing Manager">Solange ALLIOT SOTO<br />
 Trade Marketing Manager</p>
 </div>
         </div>
@@ -747,18 +747,18 @@ Trade Marketing Manager</p>
             <div class="column" ob-duplicable="true">
               <img src="img/iker_ruiz.jpg" />
               <div class="bar"></div>
-              <p>Iker RUIZ<br />
+              <p ob-language-default="Iker RUIZ&#10;Area Manager Norte de España">Iker RUIZ<br />
 Area Manager Norte de España</p>
             </div>
             <div class="column" ob-duplicable="true">
               <img src="img/daniel_martin.jpg" />
               <div class="bar"></div>
-              <p>Daniel MARTÍN<br />
+              <p ob-language-default="Daniel MARTÍN&#10;Area Manager Madrid y Centro de España">Daniel MARTÍN<br />
 Area Manager Madrid y Centro de España</p>
             </div><div class="column" ob-duplicable="true">
               <img src="img/jose_maria.jpg" alt="" title="" />
               <div class="bar"></div>
-              <p>José María ALBARRACIN<br />
+              <p ob-language-default="José María ALBARRACIN&#10;Area Manager Sur de España">José María ALBARRACIN<br />
 Area Manager Sur de España</p>
             </div>
         </div>
@@ -768,18 +768,18 @@ Area Manager Sur de España</p>
             <div class="column" ob-duplicable="true">
               <img src="img/david_palacios.jpg" />
               <div class="bar"></div>
-              <p>David PALACIOS<br />
+              <p ob-language-default="David PALACIOS&#10;Area Manager Cataluña y Baleares">David PALACIOS<br />
 Area Manager Cataluña y Baleares</p>
             </div><div class="column" ob-duplicable="true">
               <img src="uploads/marta.jpg" alt="" title="" />
               <div class="bar"></div>
-              <p>Marta OLIVEIRA<br />
+              <p ob-language-default="Marta OLIVEIRA&#10;Customer Service">Marta OLIVEIRA<br />
 Customer Service</p>
             </div>
             <div class="column" ob-duplicable="true">
               <img src="img/silvia_garcia.jpg" />
               <div class="bar"></div>
-              <p>Silvia GARCIA<br />
+              <p ob-language-default="Silvia GARCIA&#10;              Marketing Support">Silvia GARCIA<br />
               Marketing Support
               </p>
             </div>
@@ -789,7 +789,7 @@ Customer Service</p>
             </div><div class="column" ob-duplicable="true">
               <img src="uploads/Roger%20Fumas%20-%20Key%20Account%20off%20Trade%20Iberia%20N&amp;B.jpg" alt="" title="" />
               <div class="bar"></div>
-              <p>Roger FUMAS<br />
+              <p ob-language-default="Roger FUMAS&#10;Key Account Manager">Roger FUMAS<br />
 Key Account Manager</p>
             </div>
             <div class="column" ob-duplicable="true">
@@ -800,7 +800,7 @@ Key Account Manager</p>
 
     <section class="screen13">
       <div class="ui container">
-        <h2>CONTACTO</h2>
+        <h2 ob-language-default="CONTACTO">CONTACTO</h2>
         <form class="ui form" action="http://octoboot.soizen.ovh/email/RenaissanceSpirits%3Cwebsite%3E/rs-iberia@maisonvillevert.com/contact" method="post" target="dummyframe">
         <div class="two fields">
            <div class="field">
@@ -820,13 +820,13 @@ Key Account Manager</p>
         <div class="field">
           <textarea name="message" placeholder="MENSAJE*"></textarea>
         </div>
-        <span>*obligatorio</span>
-        <button class="reserve" type="submit">ENVIADO</button><br /><br />
+        <span ob-language-default="*obligatorio">*obligatorio</span>
+        <button class="reserve" type="submit" ob-language-default="ENVIADO">ENVIADO</button><br /><br />
         <div class="ui message success">
-          <div class="header">¡Gracias por ponerse en contacto con nosotros! Le responderemos lo antes posible.</div>
+          <div class="header" ob-language-default="¡Gracias por ponerse en contacto con nosotros! Le responderemos lo antes posible.">¡Gracias por ponerse en contacto con nosotros! Le responderemos lo antes posible.</div>
         </div>
         <div class="ui message error">
-          <div class="header">Todos los campos requeridos, así como un correo electrónico válido</div>
+          <div class="header" ob-language-default="Todos los campos requeridos, así como un correo electrónico válido">Todos los campos requeridos, así como un correo electrónico válido</div>
         </div>
       </form>
       <iframe width="0" height="0" border="0" name="dummyframe" id="dummyframe" style="border:none"></iframe>
@@ -839,17 +839,17 @@ Key Account Manager</p>
       <img src="uploads/BASELINE_PNGES.png" class="text" alt="" title="" />
       <img src="img/TEXTE_RS_2_mobile.png" class="text mobile" alt="LA PASIÓN DE CREAR Y DISTRIBUIR MARCAS EXCEPCIONALES" />
       <div class="cartouche">
-        <p>+34 (0)9 37 42 63 70<br />
+        <p ob-language-default="+34 (0)9 37 42 63 70&#10;rs-iberia@maisonvillevert.com">+34 (0)9 37 42 63 70<br />
 rs-iberia@maisonvillevert.com</p>
-        <p>RENAISSANCE SPIRITS IBERIA<br />
+        <p ob-language-default="RENAISSANCE SPIRITS IBERIA&#10;c/ Valencia, 287 2º-2ª&#10; 08009 Barcelona">RENAISSANCE SPIRITS IBERIA<br />
 c/ Valencia, 287 2º-2ª<br />
 <u></u><u></u> 08009 Barcelona</p>
       </div>
       <div class="divider"></div>
       <div class="foot">
-        <div class="bt"><a href="./politique_de_confidentialite.html">Política de datos personales</a></div>
-        <div class="bt"><a href="./conditions.html">Términos y condiciones de uso</a></div>
-        <div class="bt"><a href="./#contact">Contacto</a></div>
+        <div class="bt"><a href="./politique_de_confidentialite.html" ob-language-default="Política de datos personales">Política de datos personales</a></div>
+        <div class="bt"><a href="./conditions.html" ob-language-default="Términos y condiciones de uso">Términos y condiciones de uso</a></div>
+        <div class="bt"><a href="./#contact" ob-language-default="Contacto">Contacto</a></div>
       </div>
     </section>
     <footer></footer></body></html>
