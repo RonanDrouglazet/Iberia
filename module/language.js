@@ -5,7 +5,7 @@
         if (elements.length) {
             elements.each(function(i, el) {
                 $(el).contents().filter(function() {
-                    return this.nodeType == 3
+                    return this.nodeType == 3 && !!$(this).text().trim()
                 }).each(function(i, text) {
                     var sln = $(el).find('.ob-language.' + ln + ' span')[i]
                     if (sln) {
