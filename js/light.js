@@ -19,6 +19,12 @@ $(document).ready(function() {
         })
     })
 
+    var span = $($('header .column span').get(0))
+    $('header .selectbar')
+        .show()
+        .css('left', span.offset().left)
+        .css('width', span.width())
+
     var fmenu = $('header .floating')
     var menu = $('.menu.mobile')
     fmenu.click(function() {
