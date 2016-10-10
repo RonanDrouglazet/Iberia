@@ -42,7 +42,9 @@ $(document).ready(function() {
         if (window.localStorage.getItem('hash') && !window.location.hash.replace('#', '')) {
             window.location.hash = '#' + hash
             window.location.reload()
-        } else if (hash) {
+        }
+
+        if (hash) {
             window.localStorage.setItem('hash', hash)
         }
     }
