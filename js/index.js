@@ -251,20 +251,24 @@ $(document).ready(function() {
         $('.intro').fadeOut(0)
     } else {
         $('.intro').show()
-        var hash = window.location.hash.replace('#', '') || window.localStorage.getItem('hash')
-        if (window.localStorage.getItem('hash') && !window.location.hash.replace('#', '')) {
-            window.location.hash = '#' + hash
-            window.location.reload()
-        } else if (hash) {
-            window.localStorage.setItem('hash', hash)
-        }
-
-        $('.ui.dropdown').dropdown('set selected', hash).dropdown({
-            onChange: function(value) {
-                window.location.hash = '#' + value
+        if (window.top === window) {
+            var hash = window.location.hash.replace('#', '') || window.localStorage.getItem('hash')
+            if (window.localStorage.getItem('hash') && !window.location.hash.replace('#', '')) {
+                window.location.hash = '#' + hash
                 window.location.reload()
+            } else if (hash) {
+                window.localStorage.setItem('hash', hash)
             }
-        })
+
+            $('.ui.dropdown').dropdown('set selected', hash).dropdown({
+                onChange: function(value) {
+                    window.location.hash = '#' + value
+                    window.location.reload()
+                }
+            })
+        } else {
+            $('.ui.dropdown').dropdown()
+        }
 
         $('i.remove').click(function() {
             $('.cookie_use,.cookie_use_mobile').fadeOut()
