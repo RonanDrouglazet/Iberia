@@ -720,7 +720,7 @@ $(document).ready(function() {
 
      $('.screen8 img').hover(function() {
         $('.screen8 .cartouche').fadeOut()
-        $('.screen8 .cartouche:nth-child(' + $(this).data('id') + ')').fadeIn()
+        $('.screen8 .cartouche.c' + $(this).data('id')).fadeIn()
      }, function() {
          if (!window.editing) {
               $('.screen8 .cartouche:nth-child(' + $(this).data('id') + ')').fadeOut()
