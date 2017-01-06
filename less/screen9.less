@@ -9,7 +9,7 @@
     .content {
         width: 800px;
         margin: auto;
-        img { margin: 0 20px 40px 0 }
+        img, video { margin: 0 20px 40px 0 }
         h2 { margin: 40px }
         p {
             font-size: 16px;
@@ -24,7 +24,7 @@
             position: relative;
             left: -10px;
             z-index: 10;
-            img {
+            img, video {
                 margin: 20px 0 0 0;
             }
         }
@@ -37,7 +37,7 @@
     }
 
     @media only screen and (max-width:400px) {
-        .content > a > img {
+        .content > a > img, .content > a > video {
             max-width: 100%;
             margin: 0 0 40px 0;
         }
