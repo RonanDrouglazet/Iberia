@@ -245,44 +245,44 @@ $(document).ready(function() {
     /**************
      * INTRO
      **************/
-    var cookie = decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*18Y\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1"))
+     var cookie = decodeURIComponent(document.cookie.replace(new RegExp("(?:(?:^|.*;)\\s*18Y\\s*\\=\\s*([^;]*).*$)|^.*$"), "$1"))
 
-    if (window.top === window) {
-        var hash = window.location.hash.replace('#', '') || window.localStorage.getItem('hash')
-        if (window.localStorage.getItem('hash') && !window.location.hash.replace('#', '')) {
-            window.location.hash = '#' + hash
-            window.location.reload()
-        }
+     if (window.top === window) {
+         var hash = window.location.hash.replace('#', '') || window.localStorage.getItem('hash')
+         if (window.localStorage.getItem('hash') && !window.location.hash.replace('#', '')) {
+             window.location.hash = '#' + hash
+             window.location.reload()
+         }
 
-        if (hash) {
-            window.localStorage.setItem('hash', hash)
-        }
-    }
+         if (hash) {
+             window.localStorage.setItem('hash', hash)
+         }
+     }
 
-    if (cookie) {
-        $('.intro').fadeOut(0)
-    } else {
-        $('.intro').show()
-        if (window.top === window) {
-            $('.intro .ui.dropdown').dropdown('set selected', hash).dropdown({
-                onChange: function(value) {
-                    window.location.hash = '#' + value
-                    window.location.reload()
-                }
-            })
-        } else {
-            $('.intro .ui.dropdown').dropdown()
-        }
+     if (cookie) {
+         $('.intro').fadeOut(0)
+     } else {
+         $('.intro').show()
+         if (window.top === window) {
+             $('.intro .ui.dropdown').dropdown('set selected', hash).dropdown({
+                 onChange: function(value) {
+                     window.location.hash = '#' + value
+                     window.location.reload()
+                 }
+             })
+         } else {
+             $('.intro .ui.dropdown').dropdown()
+         }
 
-        $('i.remove').click(function() {
-            $('.cookie_use,.cookie_use_mobile').fadeOut()
-        })
+         $('i.remove').click(function() {
+             $('.cookie_use,.cookie_use_mobile').fadeOut()
+         })
 
-        $('button.accept').click(function() {
-            document.cookie = "18Y=true; expires=Tue, 19 Jan 2038 03:14:07 GMT; path=/"
-            $('.intro').fadeOut()
-        })
-    }
+         $('button.accept').click(function() {
+             document.cookie = "18Y=true; expires=Tue, 19 Jan 2038 03:14:07 GMT; path=/"
+             $('.intro').fadeOut()
+         })
+     }
 
 
     /**************
@@ -354,16 +354,16 @@ $(document).ready(function() {
             // hide or show arrow button if center actu
             if (classname === 'center') {
                 if (!is_touch_device) {
-                    $(actu).find('.button').fadeIn(1000)
+                    $(actu).children('.button').fadeIn(1000)
                 } else {
-                    $(actu).find('.button').fadeOut(1000)
+                    $(actu).children('.button').fadeOut(1000)
                 }
                 // and show details if already open
                 if ($(document.body).children('.screen9').length && $(document.body).children('.screen9').css('display') !== 'none') {
                     actu_details($(actu).find('section'))
                 }
             } else {
-                $(actu).find('.button').fadeOut(1000)
+                $(actu).children('.button').fadeOut(1000)
             }
         })
     }
@@ -374,7 +374,7 @@ $(document).ready(function() {
         var delay = 0
         var dir = null
 
-        actus.find('.button').fadeOut(1000)
+        actus.children('.button').fadeOut(1000)
 
         actus.each(function(i, actu) {
             $(actu).css('z-index', actus.length - i)
@@ -425,7 +425,7 @@ $(document).ready(function() {
 
                 if (dir === 'center') {
                     if (!is_touch_device) {
-                        $(actu).find('.button').fadeIn(1000)
+                        $(actu).children('.button').fadeIn(1000)
                     }
 
                     $(actu).css('z-index', 100)
@@ -447,17 +447,23 @@ $(document).ready(function() {
         actual.data('referer', section)
 
         if (current.length) {
+            if ($('body > .screen9 video').length) {
+                $('body > .screen9 video').get(0).pause()
+            }
             current.data('referer').replaceWith(current)
         }
 
         actual.insertBefore('.actu.arrowcontainer')
+
+        if ($('body > .screen9 video').length) {
+            $('body > .screen9 video').get(0).play()
+        }
     }
 
-    selectActusByDate(2015)
-    selectActusByDate(2016)
+    selectActusByDate($('.dates .date').get(0).id)
 
     if (is_touch_device) {
-        makeMeTouch(actus.find('.button'), $('.screen3'), function(left) {
+        makeMeTouch(actus.children('.button'), $('.screen3'), function(left) {
             moveActu(!left)
         })
     }
@@ -484,6 +490,10 @@ $(document).ready(function() {
             }
 
             $('.screen3 .button_down').addClass('rotate').appendTo('body > .actu.arrowcontainer')
+
+            if ($('body > .screen9 video').length) {
+                $('body > .screen9 video').get(0).play()
+            }
         } else {
             actu.find('section').replaceWith($('body > .screen9').clone())
 
@@ -498,17 +508,21 @@ $(document).ready(function() {
             }
 
             $(this).removeClass('rotate').appendTo('.screen3')
+
+            if ($('body > .screen9 video').length) {
+                $('body > .screen9 video').get(0).pause()
+            }
         }
     }
 
     $('.actu .content, .screen3 .button_down').click(show_actu_details)
 
     /**************
-     * SCREEN 5 - BOUTEILLES
+     * SCREEN 4 - BOUTEILLES
      **************/
 
      $('.screen4 .bouteille').click(function() {
-        select_slide($(this).data('id'))
+        select_slide($(this).index('.bouteille'))
      })
 
      var scalefb = function() {
@@ -720,11 +734,11 @@ $(document).ready(function() {
 
      $('.screen8 img').hover(function() {
         $('.screen8 .cartouche').fadeOut()
-        $('.screen8 .cartouche.c' + $(this).data('id')).fadeIn()
+        $('.screen8 .cartouche:nth-child(' + $(this).data('id') + ')').fadeIn()
      }, function() {
          if (!window.editing) {
-              $('.screen8 .cartouche:nth-child(' + $(this).data('id') + ')').fadeOut()
-          }
+             $('.screen8 .cartouche:nth-child(' + $(this).data('id') + ')').fadeOut()
+         }
      })
 
      /**************
@@ -850,12 +864,12 @@ $(document).ready(function() {
                         .attr('data-date', now)
                         .appendTo('section#actualites')
                     clone
-                        .find('.button')
+                        .children('.button')
                         .click(function() {
                             moveActu($(this).hasClass('right'))
                         })
                     clone
-                        .find('.content')
+                        .children('.content')
                         .click(show_actu_details)
 
                 })
@@ -883,10 +897,10 @@ $(document).ready(function() {
 
        window.octoboot_duplicate_actu = function(actu, duplicate) {
            if (duplicate) {
-               $(actu).find('.button').click(function() {
+               $(actu).children('.button').click(function() {
                    moveActu($(this).hasClass('right'))
                })
-               $(actu).find('.content').click(show_actu_details)
+               $(actu).children('.content').click(show_actu_details)
 
                selectActusByDate($('section#actualites > .dates > .date.active').attr('id'))
            } else {
@@ -929,10 +943,15 @@ $(document).ready(function() {
                             var di = getId(bt, $(element)) - 1
                             // select the slide to duplicate too
                             to_duplicate = $($('.screen5 > .slides > .slide')[ci])
-                            to_duplicate.clone().insertAfter($($('.screen5 > .slides > .slide')[di]))
+                            to_duplicate.clone().insertAfter($('.screen5 > .slides > .slide')[di])
                             // reset slides
                             slides = screen5.children('.slides').children('.slide')
-                            $(slides[++di]).css('left', Math.min(di * 100, 100) + '%')
+                            $(slides[di + 1]).css('left', Math.min((di + 1) * 100, 100) + '%')
+                            // and to finish
+                            to_duplicate = $($('.screen4 .bouteilles .bouteille')[ci])
+                            to_duplicate.clone().insertAfter($('.screen4 .bouteilles .bouteille')[di]).css({top: 0, left: 0}).click(function() {
+                               select_slide($(this).index('.bouteille'))
+                            })
                         })
                         $(element).find('span').hover(submenu_marques_span, null)
                         submenu_marques_click()
@@ -941,10 +960,12 @@ $(document).ready(function() {
                         })
                     } else {
                         var slide = $('.screen5 > .slides > .slide')
+                        var bouteilles = $('.screen4 .bouteilles .bouteille')
                         childs.each(function(i, bt) {
                             var id = getId(bt, $(element))
                             // select the slide to duplicate too
                             $(slide[id]).remove()
+                            $(bouteilles[id]).remove()
                         })
                         // reset slides
                         slides = screen5.children('.slides').children('.slide')
@@ -959,6 +980,7 @@ $(document).ready(function() {
                     if (duplicate) {
                         // if we add a marques, select and duplicate submarque to
                         var to_duplicate = $($(element).parent().next().children()[$(element).index() - 1])
+
                         to_duplicate.clone().insertAfter(to_duplicate)
                         // then active hover on it
                         $(element).find('span').hover(submenu_marques_span, null)
@@ -968,13 +990,20 @@ $(document).ready(function() {
                         to_duplicate.clone().insertAfter(to_duplicate)
                         // reset slides
                         slides = screen5.children('.slides').children('.slide')
-                        $(slides[++i]).css('left', Math.min(i * 100, 100) + '%')
+                        $(slides[i + 1]).css('left', Math.min((i + 1) * 100, 100) + '%')
                         $('.screen5 .button_rs_out').off('click').click(function() {
                             showDetails($(this).parents('.cover').find('section'))
                         })
+
+                        // and to finish
+                        to_duplicate = $($('.screen4 .bouteilles .bouteille')[i])
+                        to_duplicate.clone().insertAfter(to_duplicate).css({top: 0, left: 0}).click(function() {
+                           select_slide($(this).index('.bouteille'))
+                        })
                     } else {
                         $($('.screen5 > .slides > .slide')[++i]).remove()
-                        $($(element).parent().next().children()[$(element).index() - 1]).remove()
+                        $($(element).parent().next().children()[$(element).index()]).remove()
+                        $($('.screen4 .bouteilles .bouteille')[i]).remove()
                         slides = screen5.children('.slides').children('.slide')
                         move_auto()
                     }
@@ -993,7 +1022,6 @@ $(document).ready(function() {
 
                     // duplicate
                     if (duplicate) {
-                        console.log($(slides[i]))
                         var to_duplicate = $(slides[i]).find('section .slide:nth-child(' + ci + ')')
                         to_duplicate.clone().insertAfter(to_duplicate)
 
